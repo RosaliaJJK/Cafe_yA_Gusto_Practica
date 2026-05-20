@@ -1,0 +1,16 @@
+{
+  "name": "cafe-aroma-dulce",
+  "version": "1.0.0",
+  "description": "Sistema de pedidos para cafetería",
+  "main": "server.js",
+  "scripts": {
+    "start": "node server.js"
+  },
+  "dependencies": {
+    "body-parser": "^2.2.2",
+    "cors": "^2.8.6",
+    "express": "^4.22.2",
+    "mysql2": "^3.22.3",
+    "pg": "^8.11.3"
+  }
+}
