@@ -41,7 +41,7 @@ body {
     z-index: 1000;
 }
 
-/* ESTILOS ACTUALIZADOS: Logo mejorado */
+/* ESTILOS ACTUALIZADOS: Logo con imagen circular */
 .logo {
     display: flex;
     align-items: center;
@@ -49,18 +49,12 @@ body {
 }
 
 .logo img {
-    width: 180px; /* Más grande */
-    height: 110px; /* Mejor proporción */
-    object-fit: contain; /* Evita que se recorte */
-    transition: transform 0.3s ease;
+    width: 60px; /* Tamaño del logo */
+    height: 60px; /* Misma medida para que sea un círculo perfecto */
+    border-radius: 50%; /* Hace la imagen circular */
+    object-fit: cover; /* Evita que el logo se deforme */
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
 }
-
-/* Efecto elegante al pasar mouse */
-.logo img:hover {
-    transform: scale(1.05);
-}
-
-
 
 .nav a {
     margin: 0 20px;
