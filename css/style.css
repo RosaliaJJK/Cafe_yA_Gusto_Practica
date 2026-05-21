@@ -404,6 +404,16 @@ body {
     .nav {
         margin: 15px 0;
     }
+    
+    .chat-window{
+    width: 95%;
+    right: 10px;
+    bottom: 80px;
+    }
+
+    .chat-hint{
+        display:none;
+    }
 }
 
 /* POPUP */
