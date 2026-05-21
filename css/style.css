@@ -404,7 +404,7 @@ body {
     .nav {
         margin: 15px 0;
     }
-    
+
     .chat-window{
     width: 95%;
     right: 10px;
@@ -716,4 +716,19 @@ body {
     display: flex;
     align-items: center;
     justify-content: center;
+}
+
+
+.modal select{
+    padding:10px;
+    border-radius:10px;
+    border:1px solid #ccc;
+}
+
+.modal label{
+    font-weight:bold;
+}
+
+img{
+    max-width:100%;
 }
