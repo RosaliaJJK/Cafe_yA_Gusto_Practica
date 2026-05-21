@@ -72,40 +72,30 @@ function updateCarousel() {
 
 }
 
-nextBtn.addEventListener('click', () => {
+if(nextBtn && prevBtn){
 
-    currentIndex++;
+    nextBtn.addEventListener('click', () => {
 
-    if (currentIndex >= slides.length) {
-        currentIndex = 0;
-    }
+        currentIndex++;
 
-    updateCarousel();
+        if(currentIndex >= slides.length){
+            currentIndex = 0;
+        }
 
-});
+        updateCarousel();
 
-prevBtn.addEventListener('click', () => {
+    });
 
-    currentIndex--;
+    prevBtn.addEventListener('click', () => {
 
-    if (currentIndex < 0) {
-        currentIndex = slides.length - 1;
-    }
+        currentIndex--;
 
-    updateCarousel();
+        if(currentIndex < 0){
+            currentIndex = slides.length - 1;
+        }
 
-});
+        updateCarousel();
 
-// AUTO PLAY
+    });
 
-setInterval(() => {
-
-    currentIndex++;
-
-    if (currentIndex >= slides.length) {
-        currentIndex = 0;
-    }
-
-    updateCarousel();
-
-}, 4000);
+}
