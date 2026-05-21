@@ -1,95 +1,93 @@
+require('dotenv').config();
+// LIBRERÍAS
 const express = require("express");
-const mysql = require("mysql2");
 const path = require("path");
+const cors = require('cors');
+const { GoogleGenAI } = require('@google/genai'); // Librería oficial de Google
 
+// APP
 const app = express();
 
 const PORT = process.env.PORT || 3000;
 
+// MIDDLEWARES
 app.use(express.json());
 app.use(express.urlencoded({ extended: true }));
+app.use(cors());
 
 app.use(express.static(__dirname));
 
-const db = mysql.createConnection({
-
-    host: process.env.MYSQLHOST,
-    user: process.env.MYSQLUSER,
-    password: process.env.MYSQLPASSWORD,
-    database: process.env.MYSQLDATABASE,
-    port: process.env.MYSQLPORT
-
-});
-
-db.connect((err) => {
-
-    if (err) {
-
-        console.log("ERROR MYSQL");
-        console.log(err);
-
-    } else {
-
-        console.log("MYSQL CONECTADO");
-
-    }
-
-});
-
+// RUTA PRINCIPAL
 app.get("/", (req, res) => {
 
     res.sendFile(path.join(__dirname, "index.html"));
 
 });
 
-app.post("/guardar-pedido", (req, res) => {
+// CONFIGURACIÓN DE GEMINI
+const ai = new GoogleGenAI({
 
-    console.log("BODY:");
-    console.log(req.body);
-
-    const {
-        nombre,
-        producto,
-        tamano,
-        metodo_pago
-    } = req.body;
-
-    const sql = `
-        INSERT INTO Pedidos
-        (nombre_cliente, producto, tamano, metodo_pago)
-        VALUES (?, ?, ?, ?)
-    `;
-
-    db.query(
-        sql,
-        [nombre, producto, tamano, metodo_pago],
-        (err, result) => {
-
-            if (err) {
-
-                console.log("ERROR INSERT:");
-                console.log(err);
-
-                return res.status(500).json({
-                    mensaje: "Error guardando pedido"
-                });
-
-            }
-
-            console.log("PEDIDO GUARDADO");
-
-            return res.status(200).json({
-                mensaje: "Pedido realizado correctamente"
-            });
-
-        }
-    );
+    apiKey: process.env.GEMINI_API_KEY
 
 });
 
+// ENDPOINT DEL CHAT
+app.post('/api/chat', async (req, res) => {
 
+    const { mensajeUsuario } = req.body;
+
+    try {
+
+        // Usamos gemini-2.5-flash (el modelo rápido y gratuito)
+        const response = await ai.models.generateContent({
+
+            model: 'gemini-2.5-flash',
+
+            contents: mensajeUsuario,
+
+            config: {
+
+                // Aquí va el entrenamiento del caso de la cafetería
+                systemInstruction: `Eres el Asistente Virtual impulsado por IA de la empresa "Café y a gusto...". 
+                Tu objetivo principal es apoyar en la toma de pedidos de bebidas a base de café y snacks, reduciendo errores del proceso manual.
+                
+                Debes cumplir estrictamente con las siguientes funciones del negocio:
+                1. Asistente de Pedidos: Guía al cliente paso a paso, respondiendo preguntas y asegurando que se incluyan todos los detalles necesarios para la orden (tamaño, tipo de leche, etc.).
+                2. Personalización y Recomendaciones: Analiza de forma simulada sus gustos. Si te pide una recomendación, sugiérele combinaciones de café y snacks basadas en sus preferencias para fomentar compras adicionales.
+                3. Gestión de Inventario: Si el cliente pide un producto, actúa como si estuvieras conectado al inventario en tiempo real. Si simulas que algo no hay stock, ofrécele una alternativa para evitar la pérdida de la venta.
+                4. Promociones Personalizadas: Ofrece ofertas basadas en su comportamiento de compra para incentivar la fidelidad.
+                
+                Mantén un tono cálido, profesional y eficiente.
+                IMPORTANTE: Responde siempre en texto plano. No utilices formato Markdown ni asteriscos (**) para resaltar palabras.`
+
+            }
+
+        });
+
+        // Enviar la respuesta de Gemini de vuelta al HTML
+        res.json({
+
+            respuestaIA: response.text
+
+        });
+
+    } catch (error) {
+
+        console.error(error);
+
+        res.status(500).json({
+
+            error: "Error al procesar la respuesta de Gemini"
+
+        });
+
+    }
+
+});
+
+// INICIAR SERVIDOR
 app.listen(PORT, () => {
 
-    console.log(`Servidor corriendo en puerto ${PORT}`);
+    console.log(`Servidor corriendo en http://localhost:${PORT}`);
 
 });

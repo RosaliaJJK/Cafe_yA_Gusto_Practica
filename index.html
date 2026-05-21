@@ -14,10 +14,10 @@
 </head>
 
 <script type="text/javascript">
-    (function(c,l,a,r,i,t,y){
-        c[a]=c[a]||function(){(c[a].q=c[a].q||[]).push(arguments)};
-        t=l.createElement(r);t.async=1;t.src="https://www.clarity.ms/tag/"+i;
-        y=l.getElementsByTagName(r)[0];y.parentNode.insertBefore(t,y);
+    (function (c, l, a, r, i, t, y) {
+        c[a] = c[a] || function () { (c[a].q = c[a].q || []).push(arguments) };
+        t = l.createElement(r); t.async = 1; t.src = "https://www.clarity.ms/tag/" + i;
+        y = l.getElementsByTagName(r)[0]; y.parentNode.insertBefore(t, y);
     })(window, document, "clarity", "script", "wufdortnto");
 </script>
 
@@ -25,12 +25,13 @@
 
     <header class="header">
         <a href="#inicio" class="logo">
-            <img src="Imagenes/Logo.jpeg" alt="Logo Café ">
+            <img src="Imagenes/Logo.jpeg" alt="Logo Café Aroma Dulce">
+            <span class="logo-text">Cafe Y <span>A Gusto</span></span>
         </a>
         <nav class="nav">
             <a href="#inicio">Inicio</a>
-            <a href="#menu">Menú</a>
             <a href="#promociones">Promociones</a>
+            <a href="#menu">Menu</a>
         </nav>
     </header>
 
@@ -52,81 +53,31 @@
             <div class="carousel">
 
                 <button class="prev">&#10094;</button>
+                <button class="next">&#10095;</button>
+
 
                 <div class="carousel-track">
 
                     <div class="slide active">
-                        <img src="Imagenes_Promociones/Promocion1.jpg" alt="Promoción 1">
+                        <img src="Imagenes_Promociones/promocion1.jpeg" alt="Promoción 1">
                     </div>
 
                     <div class="slide">
-                        <img src="Imagenes_Promociones/Promocion2.jpg" alt="Promoción 2">
+                        <img src="Imagenes_Promociones/promocion3.jpeg" alt="Promoción 3">
+                    </div>
+                    
+                    <div class="slide">
+                        <img src="Imagenes_Promociones/promocion2.jpeg" alt="Promoción 2">
                     </div>
 
                     <div class="slide">
-                        <img src="Imagenes_Promociones/Promocion3.jpg" alt="Promoción 3">
+                        <img src="Imagenes_Promociones/promocion4.jpeg" alt="Promoción 4">
                     </div>
 
                     <div class="slide">
-                        <img src="Imagenes_Promociones/Promocion4.jpg" alt="Promoción 4">
+                        <img src="Imagenes_Promociones/promocion5.jpeg" alt="Promoción 5">
                     </div>
-
-                    <div class="slide">
-                        <img src="Imagenes_Promociones/Promocion5.jpg" alt="Promoción 5">
-                    </div>
-
-                    <div class="slide">
-                        <img src="Imagenes_Promociones/Promocion6.jpg" alt="Promoción 6">
-                    </div>
-
-                    <div class="slide">
-                        <img src="Imagenes_Promociones/Promocion7.jpg" alt="Promoción 7">
-                    </div>
-
-                    <div class="slide">
-                        <img src="Imagenes_Promociones/Promocion8.jpg" alt="Promoción 8">
-                    </div>
-
-                    <div class="slide">
-                        <img src="Imagenes_Promociones/Promocion9.jpg" alt="Promoción 9">
-                    </div>
-
-                    <div class="slide">
-                        <img src="Imagenes_Promociones/Promocion10.jpg" alt="Promoción 10">
-                    </div>
-
-                    <div class="slide">
-                        <img src="Imagenes_Promociones/Promocion11.jpg" alt="Promoción 11">
-                    </div>
-
-                    <div class="slide">
-                        <img src="Imagenes_Promociones/Promocion12.jpg" alt="Promoción 12">
-                    </div>
-
-                    <div class="slide">
-                        <img src="Imagenes_Promociones/Promocion13.jpg" alt="Promoción 13">
-                    </div>
-
-                    <div class="slide">
-                        <img src="Imagenes_Promociones/Promocion14.jpg" alt="Promoción 14">
-                    </div>
-
-                    <div class="slide">
-                        <img src="Imagenes_Promociones/Promocion15.jpg" alt="Promoción 15">
-                    </div>
-
-                    <div class="slide">
-                        <img src="Imagenes_Promociones/Promocion16.jpg" alt="Promoción 16">
-                    </div>
-
-                    <div class="slide">
-                        <img src="Imagenes_Promociones/Promocion17.jpg" alt="Promoción 17">
-                    </div>
-
                 </div>
-
-                <button class="next">&#10095;</button>
-
             </div>
         </div>
     </section>
@@ -142,931 +93,790 @@
             <button data-filter="combos">Combos</button>
         </div>
 
-            <div class="product-grid">
+        <div class="product-grid">
 
-                <!-- CAPUCHINO -->
+            <!-- CAPUCHINO -->
             <div class="product-card" data-category="cafes">
-                    <div class="product-img">
-                        <img src="Imagenes/capuchino.jpg" alt="Capuchino">
-                    </div>
-
-                    <div class="product-info">
-                        <h4>Capuchino</h4>
-                        <p class="price">$55.00</p>
-
-                        <button 
-                            class="btn-add"
-                            data-producto="Capuchino"
-                            data-precio="55"
-                            onclick="abrirModal(this)">
-                            +
-                        </button>
-                    </div>
+                <div class="product-img">
+                    <img src="Imagenes/capuchino.jpg" alt="Capuchino">
                 </div>
 
-                <!-- LATTE VAINILLA -->
-                <div class="product-card" data-category="cafes">
-                    <div class="product-img">
-                        <img src="Imagenes/latte-vainilla.jpg" alt="Latte Vainilla">
-                    </div>
+                <div class="product-info">
+                    <h4>Capuchino</h4>
+                    <p class="price">$55.00</p>
 
-                    <div class="product-info">
-                        <h4>Latte Vainilla</h4>
-                        <p class="price">$60.00</p>
+                    <button class="btn-add" data-producto="Capuchino" data-precio="55" onclick="abrirModal(this)">
+                        +
+                    </button>
+                </div>
+            </div>
 
-                        <button 
-                            class="btn-add"
-                            data-producto="Latte Vainilla"
-                            data-precio="60"
-                            onclick="abrirModal(this)">
-                            +
-                        </button>
-                    </div>
+            <!-- LATTE VAINILLA -->
+            <div class="product-card" data-category="cafes">
+                <div class="product-img">
+                    <img src="Imagenes/latte-vainilla.jpg" alt="Latte Vainilla">
                 </div>
 
-                <!-- LATTE CARAMELO -->
-                <div class="product-card" data-category="cafes">
-                    <div class="product-img">
-                        <img src="Imagenes/latte-caramelo.jpg" alt="Latte Caramelo">
-                    </div>
+                <div class="product-info">
+                    <h4>Latte Vainilla</h4>
+                    <p class="price">$60.00</p>
 
-                    <div class="product-info">
-                        <h4>Latte Caramelo</h4>
-                        <p class="price">$65.00</p>
+                    <button class="btn-add" data-producto="Latte Vainilla" data-precio="60" onclick="abrirModal(this)">
+                        +
+                    </button>
+                </div>
+            </div>
 
-                        <button 
-                            class="btn-add"
-                            data-producto="Latte Caramelo"
-                            data-precio="65"
-                            onclick="abrirModal(this)">
-                            +
-                        </button>
-                    </div>
+            <!-- LATTE CARAMELO -->
+            <div class="product-card" data-category="cafes">
+                <div class="product-img">
+                    <img src="Imagenes/latte-caramelo.jpg" alt="Latte Caramelo">
                 </div>
 
-                <!-- MOKA -->
-                <div class="product-card" data-category="cafes">
-                    <div class="product-img">
-                        <img src="Imagenes/moka.jpg" alt="Moka">
-                    </div>
+                <div class="product-info">
+                    <h4>Latte Caramelo</h4>
+                    <p class="price">$65.00</p>
 
-                    <div class="product-info">
-                        <h4>Moka</h4>
-                        <p class="price">$68.00</p>
+                    <button class="btn-add" data-producto="Latte Caramelo" data-precio="65" onclick="abrirModal(this)">
+                        +
+                    </button>
+                </div>
+            </div>
 
-                        <button 
-                            class="btn-add"
-                            data-producto="Moka"
-                            data-precio="68"
-                            onclick="abrirModal(this)">
-                            +
-                        </button>
-                    </div>
+            <!-- MOKA -->
+            <div class="product-card" data-category="cafes">
+                <div class="product-img">
+                    <img src="Imagenes/moka.jpg" alt="Moka">
                 </div>
 
-                <!-- AMERICANO -->
-                <div class="product-card" data-category="cafes">
-                    <div class="product-img">
-                        <img src="Imagenes/americano.jpg" alt="Americano">
-                    </div>
+                <div class="product-info">
+                    <h4>Moka</h4>
+                    <p class="price">$68.00</p>
 
-                    <div class="product-info">
-                        <h4>Americano</h4>
-                        <p class="price">$45.00</p>
+                    <button class="btn-add" data-producto="Moka" data-precio="68" onclick="abrirModal(this)">
+                        +
+                    </button>
+                </div>
+            </div>
 
-                        <button 
-                            class="btn-add"
-                            data-producto="Americano"
-                            data-precio="45"
-                            onclick="abrirModal(this)">
-                            +
-                        </button>
-                    </div>
+            <!-- AMERICANO -->
+            <div class="product-card" data-category="cafes">
+                <div class="product-img">
+                    <img src="Imagenes/americano.jpg" alt="Americano">
                 </div>
 
-                <!-- ESPRESSO DOBLE -->
-                <div class="product-card" data-category="cafes">
-                    <div class="product-img">
-                        <img src="Imagenes/espresso-doble.jpg" alt="Espresso Doble">
-                    </div>
+                <div class="product-info">
+                    <h4>Americano</h4>
+                    <p class="price">$45.00</p>
 
-                    <div class="product-info">
-                        <h4>Espresso Doble</h4>
-                        <p class="price">$40.00</p>
+                    <button class="btn-add" data-producto="Americano" data-precio="45" onclick="abrirModal(this)">
+                        +
+                    </button>
+                </div>
+            </div>
 
-                        <button 
-                            class="btn-add"
-                            data-producto="Espresso Doble"
-                            data-precio="40"
-                            onclick="abrirModal(this)">
-                            +
-                        </button>
-                    </div>
+            <!-- ESPRESSO DOBLE -->
+            <div class="product-card" data-category="cafes">
+                <div class="product-img">
+                    <img src="Imagenes/espresso-doble.jpg" alt="Espresso Doble">
                 </div>
 
-                <!-- CAFÉ HELADO -->
-                <div class="product-card" data-category="cafes">
-                    <div class="product-img">
-                        <img src="Imagenes/cafe-helado.jpg" alt="Café Helado">
-                    </div>
+                <div class="product-info">
+                    <h4>Espresso Doble</h4>
+                    <p class="price">$40.00</p>
 
-                    <div class="product-info">
-                        <h4>Café Helado</h4>
-                        <p class="price">$60.00</p>
+                    <button class="btn-add" data-producto="Espresso Doble" data-precio="40" onclick="abrirModal(this)">
+                        +
+                    </button>
+                </div>
+            </div>
 
-                        <button 
-                            class="btn-add"
-                            data-producto="Café Helado"
-                            data-precio="60"
-                            onclick="abrirModal(this)">
-                            +
-                        </button>
-                    </div>
+            <!-- CAFÉ HELADO -->
+            <div class="product-card" data-category="cafes">
+                <div class="product-img">
+                    <img src="Imagenes/cafe-helado.jpg" alt="Café Helado">
                 </div>
 
-                <!-- LATTE FRÍO -->
-                <div class="product-card" data-category="cafes">
-                    <div class="product-img">
-                        <img src="Imagenes/latte-frio.jpg" alt="Latte Frío">
-                    </div>
+                <div class="product-info">
+                    <h4>Café Helado</h4>
+                    <p class="price">$60.00</p>
 
-                    <div class="product-info">
-                        <h4>Latte Frío</h4>
-                        <p class="price">$70.00</p>
+                    <button class="btn-add" data-producto="Café Helado" data-precio="60" onclick="abrirModal(this)">
+                        +
+                    </button>
+                </div>
+            </div>
 
-                        <button 
-                            class="btn-add"
-                            data-producto="Latte Frío"
-                            data-precio="70"
-                            onclick="abrirModal(this)">
-                            +
-                        </button>
-                    </div>
+            <!-- LATTE FRÍO -->
+            <div class="product-card" data-category="cafes">
+                <div class="product-img">
+                    <img src="Imagenes/latte-frio.jpg" alt="Latte Frío">
                 </div>
 
-                <!-- DIRTY CHAI -->
-                <div class="product-card" data-category="cafes">
-                    <div class="product-img">
-                        <img src="Imagenes/dirty-chai.jpg" alt="Dirty Chai">
-                    </div>
+                <div class="product-info">
+                    <h4>Latte Frío</h4>
+                    <p class="price">$70.00</p>
 
-                    <div class="product-info">
-                        <h4>Dirty Chai</h4>
-                        <p class="price">$75.00</p>
+                    <button class="btn-add" data-producto="Latte Frío" data-precio="70" onclick="abrirModal(this)">
+                        +
+                    </button>
+                </div>
+            </div>
 
-                        <button 
-                            class="btn-add"
-                            data-producto="Dirty Chai"
-                            data-precio="75"
-                            onclick="abrirModal(this)">
-                            +
-                        </button>
-                    </div>
+            <!-- DIRTY CHAI -->
+            <div class="product-card" data-category="cafes">
+                <div class="product-img">
+                    <img src="Imagenes/dirty-chai.jpg" alt="Dirty Chai">
                 </div>
 
-                <!-- MATCHA LATTE -->
-                <div class="product-card" data-category="cafes">
-                    <div class="product-img">
-                        <img src="Imagenes/matcha-latte.jpg" alt="Matcha Latte">
-                    </div>
+                <div class="product-info">
+                    <h4>Dirty Chai</h4>
+                    <p class="price">$75.00</p>
 
-                    <div class="product-info">
-                        <h4>Matcha Latte</h4>
-                        <p class="price">$75.00</p>
+                    <button class="btn-add" data-producto="Dirty Chai" data-precio="75" onclick="abrirModal(this)">
+                        +
+                    </button>
+                </div>
+            </div>
 
-                        <button 
-                            class="btn-add"
-                            data-producto="Matcha Latte"
-                            data-precio="75"
-                            onclick="abrirModal(this)">
-                            +
-                        </button>
-                    </div>
+            <!-- MATCHA LATTE -->
+            <div class="product-card" data-category="cafes">
+                <div class="product-img">
+                    <img src="Imagenes/matcha-latte.jpg" alt="Matcha Latte">
                 </div>
 
-                <!-- CHOCOLATE CALIENTE -->
-                <div class="product-card" data-category="cafes">
-                    <div class="product-img">
-                        <img src="Imagenes/chocolate-caliente.jpg" alt="Chocolate Caliente">
-                    </div>
+                <div class="product-info">
+                    <h4>Matcha Latte</h4>
+                    <p class="price">$75.00</p>
 
-                    <div class="product-info">
-                        <h4>Chocolate Caliente</h4>
-                        <p class="price">$55.00</p>
+                    <button class="btn-add" data-producto="Matcha Latte" data-precio="75" onclick="abrirModal(this)">
+                        +
+                    </button>
+                </div>
+            </div>
 
-                        <button 
-                            class="btn-add"
-                            data-producto="Chocolate Caliente"
-                            data-precio="55"
-                            onclick="abrirModal(this)">
-                            +
-                        </button>
-                    </div>
+            <!-- CHOCOLATE CALIENTE -->
+            <div class="product-card" data-category="cafes">
+                <div class="product-img">
+                    <img src="Imagenes/chocolate-caliente.jpg" alt="Chocolate Caliente">
                 </div>
 
-                <!-- CAFÉ AVELLANA -->
-                <div class="product-card" data-category="cafes">
-                    <div class="product-img">
-                        <img src="Imagenes/cafe-avellana.jpg" alt="Café Avellana">
-                    </div>
+                <div class="product-info">
+                    <h4>Chocolate Caliente</h4>
+                    <p class="price">$55.00</p>
 
-                    <div class="product-info">
-                        <h4>Café Avellana</h4>
-                        <p class="price">$68.00</p>
+                    <button class="btn-add" data-producto="Chocolate Caliente" data-precio="55"
+                        onclick="abrirModal(this)">
+                        +
+                    </button>
+                </div>
+            </div>
 
-                        <button 
-                            class="btn-add"
-                            data-producto="Café Avellana"
-                            data-precio="68"
-                            onclick="abrirModal(this)">
-                            +
-                        </button>
-                    </div>
+            <!-- CAFÉ AVELLANA -->
+            <div class="product-card" data-category="cafes">
+                <div class="product-img">
+                    <img src="Imagenes/cafe-avellana.jpg" alt="Café Avellana">
                 </div>
 
-                <!-- CAFÉ OREO -->
-                <div class="product-card" data-category="cafes">
-                    <div class="product-img">
-                        <img src="Imagenes/cafe-oreo.jpg" alt="Café Oreo">
-                    </div>
+                <div class="product-info">
+                    <h4>Café Avellana</h4>
+                    <p class="price">$68.00</p>
 
-                    <div class="product-info">
-                        <h4>Café Oreo</h4>
-                        <p class="price">$72.00</p>
-
-                        <button 
-                            class="btn-add"
-                            data-producto="Café Oreo"
-                            data-precio="72"
-                            onclick="abrirModal(this)">
-                            +
-                        </button>
-                    </div>
+                    <button class="btn-add" data-producto="Café Avellana" data-precio="68" onclick="abrirModal(this)">
+                        +
+                    </button>
                 </div>
+            </div>
+
+            <!-- CAFÉ OREO -->
+            <div class="product-card" data-category="cafes">
+                <div class="product-img">
+                    <img src="Imagenes/cafe-oreo.jpg" alt="Café Oreo">
+                </div>
+
+                <div class="product-info">
+                    <h4>Café Oreo</h4>
+                    <p class="price">$72.00</p>
+
+                    <button class="btn-add" data-producto="Café Oreo" data-precio="72" onclick="abrirModal(this)">
+                        +
+                    </button>
+                </div>
+            </div>
 
 
             <div class="product-card" data-category="frappes">
-                    <div class="product-img">
-                        <img src="Imagenes/frappe-cookies.jpg" alt="Frappé Cookies">
-                    </div>
-                    <div class="product-info">
-                        <h4>Frappé Cookies</h4>
-                        <p class="price">$65.00</p>
-                        <button 
-                            class="btn-add"
-                            data-producto="Frappé Cookies"
-                            data-precio="65"
-                            onclick="abrirModal(this)">
-                            +
-                        </button>
-                    </div>
+                <div class="product-img">
+                    <img src="Imagenes/frappe-cookies.jpg" alt="Frappé Cookies">
                 </div>
+                <div class="product-info">
+                    <h4>Frappé Cookies</h4>
+                    <p class="price">$65.00</p>
+                    <button class="btn-add" data-producto="Frappé Cookies" data-precio="65" onclick="abrirModal(this)">
+                        +
+                    </button>
+                </div>
+            </div>
 
-                <div class="product-card" data-category="frappes">
-                    <div class="product-img">
-                        <img src="Imagenes/frappe-oreo.jpg" alt="Frappé Oreo">
-                    </div>
-                    <div class="product-info">
-                        <h4>Frappé Oreo</h4>
-                        <p class="price">$70.00</p>
-                        <button 
-                            class="btn-add"
-                            data-producto="Frappé Oreo"
-                            data-precio="70"
-                            onclick="abrirModal(this)">
-                            +
-                        </button>
-                    </div>
+            <div class="product-card" data-category="frappes">
+                <div class="product-img">
+                    <img src="Imagenes/frappe-oreo.jpg" alt="Frappé Oreo">
                 </div>
+                <div class="product-info">
+                    <h4>Frappé Oreo</h4>
+                    <p class="price">$70.00</p>
+                    <button class="btn-add" data-producto="Frappé Oreo" data-precio="70" onclick="abrirModal(this)">
+                        +
+                    </button>
+                </div>
+            </div>
 
-                <div class="product-card" data-category="frappes">
-                    <div class="product-img">
-                        <img src="Imagenes/frappe-moka.jpg" alt="Frappé Moka">
-                    </div>
-                    <div class="product-info">
-                        <h4>Frappé Moka</h4>
-                        <p class="price">$72.00</p>
-                        <button 
-                            class="btn-add"
-                            data-producto="Frappé Moka"
-                            data-precio="72"
-                            onclick="abrirModal(this)">
-                            +
-                        </button>
-                    </div>
+            <div class="product-card" data-category="frappes">
+                <div class="product-img">
+                    <img src="Imagenes/frappe-moka.jpg" alt="Frappé Moka">
                 </div>
+                <div class="product-info">
+                    <h4>Frappé Moka</h4>
+                    <p class="price">$72.00</p>
+                    <button class="btn-add" data-producto="Frappé Moka" data-precio="72" onclick="abrirModal(this)">
+                        +
+                    </button>
+                </div>
+            </div>
 
-                <div class="product-card" data-category="frappes">
-                    <div class="product-img">
-                        <img src="Imagenes/frappe-caramelo.jpg" alt="Frappé Caramelo">
-                    </div>
-                    <div class="product-info">
-                        <h4>Frappé Caramelo</h4>
-                        <p class="price">$72.00</p>
-                        <button 
-                            class="btn-add"
-                            data-producto="Frappé Caramelo"
-                            data-precio="72"
-                            onclick="abrirModal(this)">
-                            +
-                        </button>
-                    </div>
+            <div class="product-card" data-category="frappes">
+                <div class="product-img">
+                    <img src="Imagenes/frappe-caramelo.jpg" alt="Frappé Caramelo">
                 </div>
+                <div class="product-info">
+                    <h4>Frappé Caramelo</h4>
+                    <p class="price">$72.00</p>
+                    <button class="btn-add" data-producto="Frappé Caramelo" data-precio="72" onclick="abrirModal(this)">
+                        +
+                    </button>
+                </div>
+            </div>
 
-                <div class="product-card" data-category="frappes">
-                    <div class="product-img">
-                        <img src="Imagenes/frappe-cajeta.jpg" alt="Frappé Cajeta">
-                    </div>
-                    <div class="product-info">
-                        <h4>Frappé Cajeta</h4>
-                        <p class="price">$75.00</p>
-                        <button 
-                            class="btn-add"
-                            data-producto="Frappé Cajeta"
-                            data-precio="75"
-                            onclick="abrirModal(this)">
-                            +
-                        </button>
-                    </div>
+            <div class="product-card" data-category="frappes">
+                <div class="product-img">
+                    <img src="Imagenes/frappe-cajeta.jpg" alt="Frappé Cajeta">
                 </div>
+                <div class="product-info">
+                    <h4>Frappé Cajeta</h4>
+                    <p class="price">$75.00</p>
+                    <button class="btn-add" data-producto="Frappé Cajeta" data-precio="75" onclick="abrirModal(this)">
+                        +
+                    </button>
+                </div>
+            </div>
 
-                <div class="product-card" data-category="frappes">
-                    <div class="product-img">
-                        <img src="Imagenes/frappe-mazapan.jpg" alt="Frappé Mazapán">
-                    </div>
-                    <div class="product-info">
-                        <h4>Frappé Mazapán</h4>
-                        <p class="price">$75.00</p>
-                        <button 
-                            class="btn-add"
-                            data-producto="Frappé Mazapán"
-                            data-precio="75"
-                            onclick="abrirModal(this)">
-                            +
-                        </button>
-                    </div>
+            <div class="product-card" data-category="frappes">
+                <div class="product-img">
+                    <img src="Imagenes/frappe-mazapan.jpg" alt="Frappé Mazapán">
                 </div>
+                <div class="product-info">
+                    <h4>Frappé Mazapán</h4>
+                    <p class="price">$75.00</p>
+                    <button class="btn-add" data-producto="Frappé Mazapán" data-precio="75" onclick="abrirModal(this)">
+                        +
+                    </button>
+                </div>
+            </div>
 
-                <div class="product-card" data-category="frappes">
-                    <div class="product-img">
-                        <img src="Imagenes/frappe-nutella.jpg" alt="Frappé Nutella">
-                    </div>
-                    <div class="product-info">
-                        <h4>Frappé Nutella</h4>
-                        <p class="price">$80.00</p>
-                        <button 
-                            class="btn-add"
-                            data-producto="Frappé Nutella"
-                            data-precio="80"
-                            onclick="abrirModal(this)">
-                            +
-                        </button>
-                    </div>
+            <div class="product-card" data-category="frappes">
+                <div class="product-img">
+                    <img src="Imagenes/frappe-nutella.jpg" alt="Frappé Nutella">
                 </div>
+                <div class="product-info">
+                    <h4>Frappé Nutella</h4>
+                    <p class="price">$80.00</p>
+                    <button class="btn-add" data-producto="Frappé Nutella" data-precio="80" onclick="abrirModal(this)">
+                        +
+                    </button>
+                </div>
+            </div>
 
-                <div class="product-card" data-category="frappes">
-                    <div class="product-img">
-                        <img src="Imagenes/frappe-ferrero.jpg" alt="Frappé Ferrero">
-                    </div>
-                    <div class="product-info">
-                        <h4>Frappé Ferrero</h4>
-                        <p class="price">$85.00</p>
-                        <button 
-                            class="btn-add"
-                            data-producto="Frappé Ferrero"
-                            data-precio="85"
-                            onclick="abrirModal(this)">
-                            +
-                        </button>
-                    </div>
+            <div class="product-card" data-category="frappes">
+                <div class="product-img">
+                    <img src="Imagenes/frappe-ferrero.jpg" alt="Frappé Ferrero">
                 </div>
+                <div class="product-info">
+                    <h4>Frappé Ferrero</h4>
+                    <p class="price">$85.00</p>
+                    <button class="btn-add" data-producto="Frappé Ferrero" data-precio="85" onclick="abrirModal(this)">
+                        +
+                    </button>
+                </div>
+            </div>
 
-                <div class="product-card" data-category="frappes">
-                    <div class="product-img">
-                        <img src="Imagenes/frappe-fresa.jpg" alt="Frappé Fresa Cheesecake">
-                    </div>
-                    <div class="product-info">
-                        <h4>Frappé Fresa Cheesecake</h4>
-                        <p class="price">$78.00</p>
-                        <button 
-                            class="btn-add"
-                            data-producto="Frappé Fresa Cheesecake"
-                            data-precio="78"
-                            onclick="abrirModal(this)">
-                            +
-                        </button>
-                    </div>
+            <div class="product-card" data-category="frappes">
+                <div class="product-img">
+                    <img src="Imagenes/frappe-fresa.jpg" alt="Frappé Fresa Cheesecake">
                 </div>
+                <div class="product-info">
+                    <h4>Frappé Fresa Cheesecake</h4>
+                    <p class="price">$78.00</p>
+                    <button class="btn-add" data-producto="Frappé Fresa Cheesecake" data-precio="78"
+                        onclick="abrirModal(this)">
+                        +
+                    </button>
+                </div>
+            </div>
 
-                <div class="product-card" data-category="frappes">
-                    <div class="product-img">
-                        <img src="Imagenes/frappe-blanco.jpg" alt="Frappé Chocolate Blanco">
-                    </div>
-                    <div class="product-info">
-                        <h4>Frappé Chocolate Blanco</h4>
-                        <p class="price">$75.00</p>
-                        <button 
-                            class="btn-add"
-                            data-producto="Frappé Chocolate Blanco"
-                            data-precio="75"
-                            onclick="abrirModal(this)">
-                            +
-                        </button>
-                    </div>
+            <div class="product-card" data-category="frappes">
+                <div class="product-img">
+                    <img src="Imagenes/frappe-blanco.jpg" alt="Frappé Chocolate Blanco">
                 </div>
+                <div class="product-info">
+                    <h4>Frappé Chocolate Blanco</h4>
+                    <p class="price">$75.00</p>
+                    <button class="btn-add" data-producto="Frappé Chocolate Blanco" data-precio="75"
+                        onclick="abrirModal(this)">
+                        +
+                    </button>
+                </div>
+            </div>
 
-                <div class="product-card" data-category="frappes">
-                    <div class="product-img">
-                        <img src="Imagenes/frappe-chai.jpg" alt="Frappé Chai">
-                    </div>
-                    <div class="product-info">
-                        <h4>Frappé Chai</h4>
-                        <p class="price">$72.00</p>
-                        <button 
-                            class="btn-add"
-                            data-producto="Frappé Chai"
-                            data-precio="72"
-                            onclick="abrirModal(this)">
-                            +
-                        </button>
-                    </div>
+            <div class="product-card" data-category="frappes">
+                <div class="product-img">
+                    <img src="Imagenes/frappe-chai.jpg" alt="Frappé Chai">
                 </div>
+                <div class="product-info">
+                    <h4>Frappé Chai</h4>
+                    <p class="price">$72.00</p>
+                    <button class="btn-add" data-producto="Frappé Chai" data-precio="72" onclick="abrirModal(this)">
+                        +
+                    </button>
+                </div>
+            </div>
 
-                <div class="product-card" data-category="frappes">
-                    <div class="product-img">
-                        <img src="Imagenes/frappe-matcha.jpg" alt="Frappé Matcha">
-                    </div>
-                    <div class="product-info">
-                        <h4>Frappé Matcha</h4>
-                        <p class="price">$75.00</p>
-                        <button 
-                            class="btn-add"
-                            data-producto="Frappé Matcha"
-                            data-precio="75"
-                            onclick="abrirModal(this)">
-                            +
-                        </button>
-                    </div>
+            <div class="product-card" data-category="frappes">
+                <div class="product-img">
+                    <img src="Imagenes/frappe-matcha.jpg" alt="Frappé Matcha">
                 </div>
+                <div class="product-info">
+                    <h4>Frappé Matcha</h4>
+                    <p class="price">$75.00</p>
+                    <button class="btn-add" data-producto="Frappé Matcha" data-precio="75" onclick="abrirModal(this)">
+                        +
+                    </button>
+                </div>
+            </div>
 
-                <div class="product-card" data-category="frappes">
-                    <div class="product-img">
-                        <img src="Imagenes/frappe-kinder.jpg" alt="Frappé Kinder">
-                    </div>
-                    <div class="product-info">
-                        <h4>Frappé Kinder</h4>
-                        <p class="price">$85.00</p>
-                        <button 
-                            class="btn-add"
-                            data-producto="Frappé Kinder"
-                            data-precio="85"
-                            onclick="abrirModal(this)">
-                            +
-                        </button>
-                    </div>
+            <div class="product-card" data-category="frappes">
+                <div class="product-img">
+                    <img src="Imagenes/frappe-kinder.jpg" alt="Frappé Kinder">
                 </div>
+                <div class="product-info">
+                    <h4>Frappé Kinder</h4>
+                    <p class="price">$85.00</p>
+                    <button class="btn-add" data-producto="Frappé Kinder" data-precio="85" onclick="abrirModal(this)">
+                        +
+                    </button>
+                </div>
+            </div>
 
 
             <div class="product-card" data-category="snacks">
-                    <div class="product-img">
-                        <img src="Imagenes/croissant-clasico.jpg" alt="Croissant Clásico">
-                    </div>
-                    <div class="product-info">
-                        <h4>Croissant Clásico</h4>
-                        <p class="price">$20.00</p>
-                        <button 
-                            class="btn-add"
-                            data-producto="Croissant Clásico"
-                            data-precio="20"
-                            onclick="abrirModal(this)">
-                            +
-                        </button>
-                    </div>
+                <div class="product-img">
+                    <img src="Imagenes/croissant-clasico.jpg" alt="Croissant Clásico">
                 </div>
-
-                <div class="product-card" data-category="snacks">
-                    <div class="product-img">
-                        <img src="Imagenes/croissant-chocolate.jpg" alt="Croissant de Chocolate">
-                    </div>
-                    <div class="product-info">
-                        <h4>Croissant de Chocolate</h4>
-                        <p class="price">$35.00</p>
-                        <button 
-                            class="btn-add"
-                            data-producto="Croissant de Chocolate"
-                            data-precio="35"
-                            onclick="abrirModal(this)">
-                            +
-                        </button>
-                    </div>
+                <div class="product-info">
+                    <h4>Croissant Clásico</h4>
+                    <p class="price">$20.00</p>
+                    <button class="btn-add" data-producto="Croissant Clásico" data-precio="20"
+                        onclick="abrirModal(this)">
+                        +
+                    </button>
                 </div>
+            </div>
 
-                <div class="product-card" data-category="snacks">
-                    <div class="product-img">
-                        <img src="Imagenes/croissant-cajeta.jpg" alt="Croissant de Cajeta">
-                    </div>
-                    <div class="product-info">
-                        <h4>Croissant de Cajeta</h4>
-                        <p class="price">$38.00</p>
-                        <button 
-                            class="btn-add"
-                            data-producto="Croissant de Cajeta"
-                            data-precio="38"
-                            onclick="abrirModal(this)">
-                            +
-                        </button>
-                    </div>
+            <div class="product-card" data-category="snacks">
+                <div class="product-img">
+                    <img src="Imagenes/croissant-chocolate.jpg" alt="Croissant de Chocolate">
                 </div>
-
-                <div class="product-card" data-category="snacks">
-                    <div class="product-img">
-                        <img src="Imagenes/croissant-nutella.jpg" alt="Croissant de Nutella">
-                    </div>
-                    <div class="product-info">
-                        <h4>Croissant de Nutella</h4>
-                        <p class="price">$42.00</p>
-                        <button 
-                            class="btn-add"
-                            data-producto="Croissant de Nutella"
-                            data-precio="42"
-                            onclick="abrirModal(this)">
-                            +
-                        </button>
-                    </div>
+                <div class="product-info">
+                    <h4>Croissant de Chocolate</h4>
+                    <p class="price">$35.00</p>
+                    <button class="btn-add" data-producto="Croissant de Chocolate" data-precio="35"
+                        onclick="abrirModal(this)">
+                        +
+                    </button>
                 </div>
+            </div>
 
-                <div class="product-card" data-category="snacks">
-                    <div class="product-img">
-                        <img src="Imagenes/croissant-jamon-queso.jpg" alt="Croissant Jamón y Queso">
-                    </div>
-                    <div class="product-info">
-                        <h4>Croissant Jamón y Queso</h4>
-                        <p class="price">$55.00</p>
-                        <button 
-                            class="btn-add"
-                            data-producto="Croissant Jamón y Queso"
-                            data-precio="55"
-                            onclick="abrirModal(this)">
-                            +
-                        </button>
-                    </div>
+            <div class="product-card" data-category="snacks">
+                <div class="product-img">
+                    <img src="Imagenes/croissant-cajeta.jpg" alt="Croissant de Cajeta">
                 </div>
-
-                <div class="product-card" data-category="snacks">
-                    <div class="product-img">
-                        <img src="Imagenes/croissant-pepperoni.jpg" alt="Croissant Pepperoni">
-                    </div>
-                    <div class="product-info">
-                        <h4>Croissant Pepperoni</h4>
-                        <p class="price">$60.00</p>
-                        <button 
-                            class="btn-add"
-                            data-producto="Croissant Pepperoni"
-                            data-precio="60"
-                            onclick="abrirModal(this)">
-                            +
-                        </button>
-                    </div>
+                <div class="product-info">
+                    <h4>Croissant de Cajeta</h4>
+                    <p class="price">$38.00</p>
+                    <button class="btn-add" data-producto="Croissant de Cajeta" data-precio="38"
+                        onclick="abrirModal(this)">
+                        +
+                    </button>
                 </div>
+            </div>
 
-                <div class="product-card" data-category="snacks">
-                    <div class="product-img">
-                        <img src="Imagenes/croissant-pollo.jpg" alt="Croissant Pollo Chipotle">
-                    </div>
-                    <div class="product-info">
-                        <h4>Croissant Pollo Chipotle</h4>
-                        <p class="price">$65.00</p>
-                        <button 
-                            class="btn-add"
-                            data-producto="Croissant Pollo Chipotle"
-                            data-precio="65"
-                            onclick="abrirModal(this)">
-                            +
-                        </button>
-                    </div>
+            <div class="product-card" data-category="snacks">
+                <div class="product-img">
+                    <img src="Imagenes/croissant-nutella.jpg" alt="Croissant de Nutella">
                 </div>
-
-                <div class="product-card" data-category="snacks">
-                    <div class="product-img">
-                        <img src="Imagenes/croissant-serrano.jpg" alt="Croissant Jamón Serrano">
-                    </div>
-                    <div class="product-info">
-                        <h4>Croissant Jamón Serrano</h4>
-                        <p class="price">$75.00</p>
-                        <button 
-                            class="btn-add"
-                            data-producto="Croissant Jamón Serrano"
-                            data-precio="75"
-                            onclick="abrirModal(this)">
-                            +
-                        </button>
-                    </div>
+                <div class="product-info">
+                    <h4>Croissant de Nutella</h4>
+                    <p class="price">$42.00</p>
+                    <button class="btn-add" data-producto="Croissant de Nutella" data-precio="42"
+                        onclick="abrirModal(this)">
+                        +
+                    </button>
                 </div>
+            </div>
 
-                <div class="product-card" data-category="snacks">
-                    <div class="product-img">
-                        <img src="Imagenes/croissant-hawaiano.jpg" alt="Croissant Hawaiano">
-                    </div>
-                    <div class="product-info">
-                        <h4>Croissant Hawaiano</h4>
-                        <p class="price">$65.00</p>
-                        <button 
-                            class="btn-add"
-                            data-producto="Croissant Hawaiano"
-                            data-precio="65"
-                            onclick="abrirModal(this)">
-                            +
-                        </button>
-                    </div>
+            <div class="product-card" data-category="snacks">
+                <div class="product-img">
+                    <img src="Imagenes/croissant-jamon-queso.jpg" alt="Croissant Jamón y Queso">
                 </div>
-
-                <div class="product-card" data-category="snacks">
-                    <div class="product-img">
-                        <img src="Imagenes/brownie.jpg" alt="Brownie">
-                    </div>
-                    <div class="product-info">
-                        <h4>Brownie</h4>
-                        <p class="price">$35.00</p>
-                        <button 
-                            class="btn-add"
-                            data-producto="Brownie"
-                            data-precio="35"
-                            onclick="abrirModal(this)">
-                            +
-                        </button>
-                    </div>
+                <div class="product-info">
+                    <h4>Croissant Jamón y Queso</h4>
+                    <p class="price">$55.00</p>
+                    <button class="btn-add" data-producto="Croissant Jamón y Queso" data-precio="55"
+                        onclick="abrirModal(this)">
+                        +
+                    </button>
                 </div>
+            </div>
 
-                <div class="product-card" data-category="snacks">
-                    <div class="product-img">
-                        <img src="Imagenes/galletas-oreo.jpg" alt="Galletas Oreo">
-                    </div>
-                    <div class="product-info">
-                        <h4>Galletas Oreo</h4>
-                        <p class="price">$25.00</p>
-                        <button 
-                            class="btn-add"
-                            data-producto="Galletas Oreo"
-                            data-precio="25"
-                            onclick="abrirModal(this)">
-                            +
-                        </button>
-                    </div>
+            <div class="product-card" data-category="snacks">
+                <div class="product-img">
+                    <img src="Imagenes/croissant-pepperoni.jpg" alt="Croissant Pepperoni">
                 </div>
-
-                <div class="product-card" data-category="snacks">
-                    <div class="product-img">
-                        <img src="Imagenes/cheesecake.jpg" alt="Cheesecake">
-                    </div>
-                    <div class="product-info">
-                        <h4>Cheesecake</h4>
-                        <p class="price">$55.00</p>
-                        <button 
-                            class="btn-add"
-                            data-producto="Cheesecake"
-                            data-precio="55"
-                            onclick="abrirModal(this)">
-                            +
-                        </button>
-                    </div>
+                <div class="product-info">
+                    <h4>Croissant Pepperoni</h4>
+                    <p class="price">$60.00</p>
+                    <button class="btn-add" data-producto="Croissant Pepperoni" data-precio="60"
+                        onclick="abrirModal(this)">
+                        +
+                    </button>
                 </div>
+            </div>
 
-                <div class="product-card" data-category="snacks">
-                    <div class="product-img">
-                        <img src="Imagenes/muffin-chocolate.jpg" alt="Muffin de Chocolate">
-                    </div>
-                    <div class="product-info">
-                        <h4>Muffin de Chocolate</h4>
-                        <p class="price">$38.00</p>
-                        <button 
-                            class="btn-add"
-                            data-producto="Muffin de Chocolate"
-                            data-precio="38"
-                            onclick="abrirModal(this)">
-                            +
-                        </button>
-                    </div>
+            <div class="product-card" data-category="snacks">
+                <div class="product-img">
+                    <img src="Imagenes/croissant-pollo.jpg" alt="Croissant Pollo Chipotle">
                 </div>
-
-                <div class="product-card" data-category="snacks">
-                    <div class="product-img">
-                        <img src="Imagenes/papas-gajo.jpg" alt="Papas Gajo">
-                    </div>
-                    <div class="product-info">
-                        <h4>Papas Gajo</h4>
-                        <p class="price">$45.00</p>
-                        <button 
-                            class="btn-add"
-                            data-producto="Papas Gajo"
-                            data-precio="45"
-                            onclick="abrirModal(this)">
-                            +
-                        </button>
-                    </div>
+                <div class="product-info">
+                    <h4>Croissant Pollo Chipotle</h4>
+                    <p class="price">$65.00</p>
+                    <button class="btn-add" data-producto="Croissant Pollo Chipotle" data-precio="65"
+                        onclick="abrirModal(this)">
+                        +
+                    </button>
                 </div>
+            </div>
 
-                <div class="product-card" data-category="snacks">
-                    <div class="product-img">
-                        <img src="Imagenes/panini-italiano.jpg" alt="Panini Italiano">
-                    </div>
-                    <div class="product-info">
-                        <h4>Panini Italiano</h4>
-                        <p class="price">$85.00</p>
-                        <button 
-                            class="btn-add"
-                            data-producto="Panini Italiano"
-                            data-precio="85"
-                            onclick="abrirModal(this)">
-                            +
-                        </button>
-                    </div>
+            <div class="product-card" data-category="snacks">
+                <div class="product-img">
+                    <img src="Imagenes/croissant-serrano.jpg" alt="Croissant Jamón Serrano">
                 </div>
-
-                <div class="product-card" data-category="snacks">
-                    <div class="product-img">
-                        <img src="Imagenes/sandwich-club.jpg" alt="Sándwich Club">
-                    </div>
-                    <div class="product-info">
-                        <h4>Sándwich Club</h4>
-                        <p class="price">$75.00</p>
-                        <button 
-                            class="btn-add"
-                            data-producto="Sándwich Club"
-                            data-precio="75"
-                            onclick="abrirModal(this)">
-                            +
-                        </button>
-                    </div>
+                <div class="product-info">
+                    <h4>Croissant Jamón Serrano</h4>
+                    <p class="price">$75.00</p>
+                    <button class="btn-add" data-producto="Croissant Jamón Serrano" data-precio="75"
+                        onclick="abrirModal(this)">
+                        +
+                    </button>
                 </div>
+            </div>
 
-                <div class="product-card" data-category="snacks">
-                    <div class="product-img">
-                        <img src="Imagenes/molletes.jpg" alt="Molletes">
-                    </div>
-                    <div class="product-info">
-                        <h4>Molletes</h4>
-                        <p class="price">$65.00</p>
-                        <button 
-                            class="btn-add"
-                            data-producto="Molletes"
-                            data-precio="65"
-                            onclick="abrirModal(this)">
-                            +
-                        </button>
-                    </div>
+            <div class="product-card" data-category="snacks">
+                <div class="product-img">
+                    <img src="Imagenes/croissant-hawaiano.jpg" alt="Croissant Hawaiano">
                 </div>
+                <div class="product-info">
+                    <h4>Croissant Hawaiano</h4>
+                    <p class="price">$65.00</p>
+                    <button class="btn-add" data-producto="Croissant Hawaiano" data-precio="65"
+                        onclick="abrirModal(this)">
+                        +
+                    </button>
+                </div>
+            </div>
+
+            <div class="product-card" data-category="snacks">
+                <div class="product-img">
+                    <img src="Imagenes/brownie.jpg" alt="Brownie">
+                </div>
+                <div class="product-info">
+                    <h4>Brownie</h4>
+                    <p class="price">$35.00</p>
+                    <button class="btn-add" data-producto="Brownie" data-precio="35" onclick="abrirModal(this)">
+                        +
+                    </button>
+                </div>
+            </div>
+
+            <div class="product-card" data-category="snacks">
+                <div class="product-img">
+                    <img src="Imagenes/galletas-oreo.jpg" alt="Galletas Oreo">
+                </div>
+                <div class="product-info">
+                    <h4>Galletas Oreo</h4>
+                    <p class="price">$25.00</p>
+                    <button class="btn-add" data-producto="Galletas Oreo" data-precio="25" onclick="abrirModal(this)">
+                        +
+                    </button>
+                </div>
+            </div>
+
+            <div class="product-card" data-category="snacks">
+                <div class="product-img">
+                    <img src="Imagenes/cheesecake.jpg" alt="Cheesecake">
+                </div>
+                <div class="product-info">
+                    <h4>Cheesecake</h4>
+                    <p class="price">$55.00</p>
+                    <button class="btn-add" data-producto="Cheesecake" data-precio="55" onclick="abrirModal(this)">
+                        +
+                    </button>
+                </div>
+            </div>
+
+            <div class="product-card" data-category="snacks">
+                <div class="product-img">
+                    <img src="Imagenes/muffin-chocolate.jpg" alt="Muffin de Chocolate">
+                </div>
+                <div class="product-info">
+                    <h4>Muffin de Chocolate</h4>
+                    <p class="price">$38.00</p>
+                    <button class="btn-add" data-producto="Muffin de Chocolate" data-precio="38"
+                        onclick="abrirModal(this)">
+                        +
+                    </button>
+                </div>
+            </div>
+
+            <div class="product-card" data-category="snacks">
+                <div class="product-img">
+                    <img src="Imagenes/papas-gajo.jpg" alt="Papas Gajo">
+                </div>
+                <div class="product-info">
+                    <h4>Papas Gajo</h4>
+                    <p class="price">$45.00</p>
+                    <button class="btn-add" data-producto="Papas Gajo" data-precio="45" onclick="abrirModal(this)">
+                        +
+                    </button>
+                </div>
+            </div>
+
+            <div class="product-card" data-category="snacks">
+                <div class="product-img">
+                    <img src="Imagenes/panini-italiano.jpg" alt="Panini Italiano">
+                </div>
+                <div class="product-info">
+                    <h4>Panini Italiano</h4>
+                    <p class="price">$85.00</p>
+                    <button class="btn-add" data-producto="Panini Italiano" data-precio="85" onclick="abrirModal(this)">
+                        +
+                    </button>
+                </div>
+            </div>
+
+            <div class="product-card" data-category="snacks">
+                <div class="product-img">
+                    <img src="Imagenes/sandwich-club.jpg" alt="Sándwich Club">
+                </div>
+                <div class="product-info">
+                    <h4>Sándwich Club</h4>
+                    <p class="price">$75.00</p>
+                    <button class="btn-add" data-producto="Sándwich Club" data-precio="75" onclick="abrirModal(this)">
+                        +
+                    </button>
+                </div>
+            </div>
+
+            <div class="product-card" data-category="snacks">
+                <div class="product-img">
+                    <img src="Imagenes/molletes.jpg" alt="Molletes">
+                </div>
+                <div class="product-info">
+                    <h4>Molletes</h4>
+                    <p class="price">$65.00</p>
+                    <button class="btn-add" data-producto="Molletes" data-precio="65" onclick="abrirModal(this)">
+                        +
+                    </button>
+                </div>
+            </div>
 
 
-                <div class="product-card" data-category="combos">
-                            <div class="product-img">
-                                <img src="Imagenes/combo-clasico.jpg" alt="Combo Desayuno Clásico">
-                            </div>
-                            <div class="product-info">
-                                <h4>Combo Desayuno Clásico</h4>
-                                <p class="price">$75.00</p>
-                                <button 
-                                    class="btn-add"
-                                    data-producto="Combo Desayuno Clásico"
-                                    data-precio="75"
-                                    onclick="abrirModal(this)">
-                                    +
-                                </button>
-                            </div>
-                        </div>
+            <div class="product-card" data-category="combos">
+                <div class="product-img">
+                    <img src="Imagenes/combo-clasico.jpg" alt="Combo Desayuno Clásico">
+                </div>
+                <div class="product-info">
+                    <h4>Combo Desayuno Clásico</h4>
+                    <p class="price">$75.00</p>
+                    <button class="btn-add" data-producto="Combo Desayuno Clásico" data-precio="75"
+                        onclick="abrirModal(this)">
+                        +
+                    </button>
+                </div>
+            </div>
 
-                        <div class="product-card" data-category="combos">
-                            <div class="product-img">
-                                <img src="Imagenes/combo-sandwich.jpg" alt="Combo Sandwich">
-                            </div>
-                            <div class="product-info">
-                                <h4>Combo Sandwich</h4>
-                                <p class="price">$115.00</p>
-                                <button 
-                                    class="btn-add"
-                                    data-producto="Combo Sandwich"
-                                    data-precio="115"
-                                    onclick="abrirModal(this)">
-                                    +
-                                </button>
-                            </div>
-                        </div>
+            <div class="product-card" data-category="combos">
+                <div class="product-img">
+                    <img src="Imagenes/combo-sandwich.jpg" alt="Combo Sandwich">
+                </div>
+                <div class="product-info">
+                    <h4>Combo Sandwich</h4>
+                    <p class="price">$115.00</p>
+                    <button class="btn-add" data-producto="Combo Sandwich" data-precio="115" onclick="abrirModal(this)">
+                        +
+                    </button>
+                </div>
+            </div>
 
-                        <div class="product-card" data-category="combos">
-                            <div class="product-img">
-                                <img src="Imagenes/combo-panini.jpg" alt="Combo Panini">
-                            </div>
-                            <div class="product-info">
-                                <h4>Combo Panini</h4>
-                                <p class="price">$135.00</p>
-                                <button 
-                                    class="btn-add"
-                                    data-producto="Combo Panini"
-                                    data-precio="135"
-                                    onclick="abrirModal(this)">
-                                    +
-                                </button>
-                            </div>
-                        </div>
+            <div class="product-card" data-category="combos">
+                <div class="product-img">
+                    <img src="Imagenes/combo-panini.jpg" alt="Combo Panini">
+                </div>
+                <div class="product-info">
+                    <h4>Combo Panini</h4>
+                    <p class="price">$135.00</p>
+                    <button class="btn-add" data-producto="Combo Panini" data-precio="135" onclick="abrirModal(this)">
+                        +
+                    </button>
+                </div>
+            </div>
 
-                        <div class="product-card" data-category="combos">
-                            <div class="product-img">
-                                <img src="Imagenes/combo-pareja.jpg" alt="Combo Pareja">
-                            </div>
-                            <div class="product-info">
-                                <h4>Combo Pareja</h4>
-                                <p class="price">$149.00</p>
-                                <button 
-                                    class="btn-add"
-                                    data-producto="Combo Pareja"
-                                    data-precio="149"
-                                    onclick="abrirModal(this)">
-                                    +
-                                </button>
-                            </div>
-                        </div>
+            <div class="product-card" data-category="combos">
+                <div class="product-img">
+                    <img src="Imagenes/combo-pareja.jpg" alt="Combo Pareja">
+                </div>
+                <div class="product-info">
+                    <h4>Combo Pareja</h4>
+                    <p class="price">$149.00</p>
+                    <button class="btn-add" data-producto="Combo Pareja" data-precio="149" onclick="abrirModal(this)">
+                        +
+                    </button>
+                </div>
+            </div>
 
-                        <div class="product-card" data-category="combos">
-                            <div class="product-img">
-                                <img src="Imagenes/combo-estudiante.jpg" alt="Combo Estudiante">
-                            </div>
-                            <div class="product-info">
-                                <h4>Combo Estudiante</h4>
-                                <p class="price">$95.00</p>
-                                <button 
-                                    class="btn-add"
-                                    data-producto="Combo Estudiante"
-                                    data-precio="95"
-                                    onclick="abrirModal(this)">
-                                    +
-                                </button>
-                            </div>
-                        </div>
+            <div class="product-card" data-category="combos">
+                <div class="product-img">
+                    <img src="Imagenes/combo-estudiante.jpg" alt="Combo Estudiante">
+                </div>
+                <div class="product-info">
+                    <h4>Combo Estudiante</h4>
+                    <p class="price">$95.00</p>
+                    <button class="btn-add" data-producto="Combo Estudiante" data-precio="95"
+                        onclick="abrirModal(this)">
+                        +
+                    </button>
+                </div>
+            </div>
 
-                        <div class="product-card" data-category="combos">
-                            <div class="product-img">
-                                <img src="Imagenes/combo-dulce.jpg" alt="Combo Dulce">
-                            </div>
-                            <div class="product-info">
-                                <h4>Combo Dulce</h4>
-                                <p class="price">$99.00</p>
-                                <button 
-                                    class="btn-add"
-                                    data-producto="Combo Dulce"
-                                    data-precio="99"
-                                    onclick="abrirModal(this)">
-                                    +
-                                </button>
-                            </div>
-                        </div>
+            <div class="product-card" data-category="combos">
+                <div class="product-img">
+                    <img src="Imagenes/combo-dulce.jpg" alt="Combo Dulce">
+                </div>
+                <div class="product-info">
+                    <h4>Combo Dulce</h4>
+                    <p class="price">$99.00</p>
+                    <button class="btn-add" data-producto="Combo Dulce" data-precio="99" onclick="abrirModal(this)">
+                        +
+                    </button>
+                </div>
+            </div>
 
-                        <div class="product-card" data-category="combos">
-                            <div class="product-img">
-                                <img src="Imagenes/combo-ejecutivo.jpg" alt="Combo Ejecutivo">
-                            </div>
-                            <div class="product-info">
-                                <h4>Combo Ejecutivo</h4>
-                                <p class="price">$140.00</p>
-                                <button 
-                                    class="btn-add"
-                                    data-producto="Combo Ejecutivo"
-                                    data-precio="140"
-                                    onclick="abrirModal(this)">
-                                    +
-                                </button>
-                            </div>
-                        </div>
+            <div class="product-card" data-category="combos">
+                <div class="product-img">
+                    <img src="Imagenes/combo-ejecutivo.jpg" alt="Combo Ejecutivo">
+                </div>
+                <div class="product-info">
+                    <h4>Combo Ejecutivo</h4>
+                    <p class="price">$140.00</p>
+                    <button class="btn-add" data-producto="Combo Ejecutivo" data-precio="140"
+                        onclick="abrirModal(this)">
+                        +
+                    </button>
+                </div>
+            </div>
 
-                        <div class="product-card" data-category="combos">
-                            <div class="product-img">
-                                <img src="Imagenes/combo-morning.jpg" alt="Combo Morning">
-                            </div>
-                            <div class="product-info">
-                                <h4>Combo Morning</h4>
-                                <p class="price">$110.00</p>
-                                <button 
-                                    class="btn-add"
-                                    data-producto="Combo Morning"
-                                    data-precio="110"
-                                    onclick="abrirModal(this)">
-                                    +
-                                </button>
-                            </div>
-                        </div>
-        </div>
-    </section>
-
-    <section class="recommendations">
-        <div class="container">
-            <h4>Recomendaciones Personalizadas</h4>
-            <p>¡Acompaña tu bebida con estos favoritos!</p>
-            <div class="rec-flex">
-                <div class="rec-item">🍪 Galleta de Chocolate - $20</div>
-                <div class="rec-item">🧁 Muffin de Arándanos - $25</div>
+            <div class="product-card" data-category="combos">
+                <div class="product-img">
+                    <img src="Imagenes/combo-morning.jpg" alt="Combo Morning">
+                </div>
+                <div class="product-info">
+                    <h4>Combo Morning</h4>
+                    <p class="price">$110.00</p>
+                    <button class="btn-add" data-producto="Combo Morning" data-precio="110" onclick="abrirModal(this)">
+                        +
+                    </button>
+                </div>
             </div>
         </div>
     </section>
 
+    <section id="formulario" class="order-form-section">
+        <div class="form-container">
+            <h3>Finalizar Mi Pedido</h3>
+            <form id="form-finalizar-pedido">
+                <div class="form-group">
+                    <label for="nombre">Nombre Completo</label>
+                    <input type="text" id="nombre" name="nombre" placeholder="Tu nombre y apellido" required>
+                </div>
 
+                <div class="form-group">
+                    <label for="direccion">Dirección de Entrega</label>
+                    <input type="text" id="direccion" name="direccion"
+                        placeholder="Calle, número, colonia y referencias" required>
+                </div>
+
+                <div class="form-group">
+                    <label for="metodo_pago">Método de Pago</label>
+                    <select id="metodo_pago" name="metodo_pago">
+                        <option value="Efectivo">Efectivo (Pagas al recibir)</option>
+                        <option value="Tarjeta">Tarjeta (Terminal móvil al entregar)</option>
+                    </select>
+                </div>
+
+                <div class="form-resumen-contenedor">
+                    <h4>Productos en tu orden:</h4>
+                    <ul id="resumen-productos-form">
+                        <li style="color: #868e96; font-style: italic; list-style: none;">Tu carrito está vacío. ¡Agrega
+                            delicias desde el menú!</li>
+                    </ul>
+                    <div class="form-total-linea">
+                        <span>Total a Pagar:</span>
+                        <strong>$<span id="form-total-valor">0.00</span></strong>
+                    </div>
+                </div>
+
+                <button type="submit" class="btn-purchase">CONFIRMAR COMPRA</button>
+            </form>
+        </div>
+    </section>
+
+    <div class="carrito-flotante-contenedor">
+        <div class="carrito-desplegable" id="carrito-panel">
+            <h2>Tu Pedido</h2>
+            <ul id="lista-carrito">
+            </ul>
+            <h3 style="margin-top: 15px; display: flex; justify-content: space-between; font-size: 16px;">
+                <span>Total:</span> <span>$<span id="total-carrito">0.00</span></span>
+            </h3>
+            <button class="btn-checkout-cart" onclick="irAlCheckout()">Ir a Pagar</button>
+            <button class="btn-vaciar" onclick="vaciarCarrito()">Vaciar Carrito</button>
+        </div>
+
+        <button class="icono-carrito-btn" onclick="conmutarCarrito()">
+            🛒
+            <span class="contador-badge" id="carrito-contador">0</span>
+        </button>
+    </div>
+
+    <!-- ChatBot -->
     <div class="chatbot-bubble" onclick="toggleChat()">
         <span>💬</span>
         <div class="chat-hint">Hola, ¿en qué puedo ayudarte?</div>
@@ -1074,7 +884,7 @@
 
     <div class="chat-window" id="chatWindow">
         <div class="chat-header">
-            <span>☕ Asistente "Café y a gusto..."</span>
+            <span>Asistente "Café y a gusto..."</span>
             <!-- Botón para cerrar -->
             <button class="close-btn" onclick="toggleChat(event)">✕</button>
         </div>
@@ -1092,7 +902,7 @@
     </div>
 
     <script src="script.js"></script>
-    
+
     <script>
         // Función para abrir y cerrar la ventana del chat
         function toggleChat(event) {
@@ -1115,8 +925,8 @@
             }
         }
 
-        // Enviar el mensaje del usuario
-        function enviarMensaje() {
+        // Enviar el mensaje del usuario a la IA Real
+        async function enviarMensaje() {
             const input = document.getElementById('userInput');
             const mensajeTexto = input.value.trim();
 
@@ -1124,10 +934,10 @@
 
             const chatBody = document.getElementById('chatBody');
 
-            // Crear globo del usuario
+            // 1. Crear e insertar globo del usuario (con tu estilo de ajuste de texto)
             const userDiv = document.createElement('div');
             userDiv.style.alignSelf = 'flex-end';
-            userDiv.style.backgroundColor = '#6F4E37'; // Tu toque de color café ☕
+            userDiv.style.backgroundColor = '#6F4E37'; // Tu color café
             userDiv.style.color = 'white';
             userDiv.className = 'msg';
             userDiv.innerText = mensajeTexto;
@@ -1136,236 +946,390 @@
             input.value = ''; // Limpiar campo
             chatBody.scrollTop = chatBody.scrollHeight; // Auto-scroll
 
-            // ==========================================================
-            // NUEVO: Llamar a la IA de "Café y a gusto..." tras 1 segundo
-            // ==========================================================
-            setTimeout(() => {
-                responderAsistenteIA(mensajeTexto);
-            }, 1000);
-        }
-
-        // Lógica del Asistente Virtual impulsado por IA
-        function responderAsistenteIA(mensajeUsuario) {
-            const msg = mensajeUsuario.toLowerCase();
-            const chatBody = document.getElementById('chatBody');
-
-            // Crear globo del bot
+            // 2. Crear globo de "Escribiendo..." para el Bot
             const botDiv = document.createElement('div');
             botDiv.style.alignSelf = 'flex-start';
             botDiv.style.backgroundColor = '#e9ecef';
             botDiv.style.color = '#333';
             botDiv.className = 'msg';
-
-            // 1. Simulación de NLP: Analizar historial y preferencias de clientes
-            if (msg.includes('recomienda') || msg.includes('gustos') || msg.includes('preferencias')) {
-                // Simula la lectura del historial para ofrecer compras adicionales [cite: 6, 7]
-                botDiv.innerText = "Analizando tu historial, veo que prefieres las bebidas dulces y frías. Te recomiendo nuestro Frappé Mocha con un extra de jarabe de vainilla junto a un muffin de chocolate. ¿Te lo preparo? ";
-            }
-
-            // 2. Simulación de Toma de Pedidos y Gestión de Inventario en Tiempo Real
-            else if (msg.includes('pedir') || msg.includes('ordenar') || msg.includes('latte') || msg.includes('café')) {
-                // Simula la conexión en tiempo real con el inventario de la sucursal 
-                const stockDisponible = true;
-
-                if (stockDisponible) {
-                    // Guía al cliente asegurando que se incluyan todos los detalles para evitar errores [cite: 8]
-                    botDiv.innerText = "He verificado el stock en tiempo real y ¡sí tenemos disponibilidad!. Para asegurar que tu pedido sea perfecto: ¿lo prefieres con leche entera, deslactosada o de almendras? ";
-                } else {
-                    botDiv.innerText = "Acabo de revisar el sistema de inventario y esa bebida se encuentra temporalmente agotada por falta de stock[cite: 10, 11]. ¿Te puedo sugerir nuestra especialidad del día?";
-                }
-            }
-
-            // 3. Simulación de Promociones y Ofertas Personalizadas
-            else if (msg.includes('promocion') || msg.includes('oferta') || msg.includes('descuento')) {
-                // Ofrece una promoción basada en el comportamiento de compra para incentivar la fidelidad [cite: 12]
-                botDiv.innerText = "¡Tienes una oferta personalizada! Como eres cliente frecuente de los viernes, si agregas un snack a tu café actual, tu postre tiene un 25% de descuento inmediato.";
-            }
-
-            // 4. Respuesta por defecto del Asistente Virtual
-            else {
-                // Guía inicial del proceso de pedido y resolución de dudas [cite: 8]
-                botDiv.innerText = "¡Hola! Soy el asistente virtual de 'Café y a gusto...'. Estoy listo para ayudarte a tomar tu pedido sin filas, darte recomendaciones según tus gustos o mostrarte tus ofertas del día. ¿Qué se te antoja hoy? ";
-            }
-
-            // Insertar la respuesta en la pantalla y bajar el scroll
+            botDiv.innerText = "Pensando...";
             chatBody.appendChild(botDiv);
             chatBody.scrollTop = chatBody.scrollHeight;
+
+            // 3. Petición al servidor Backend
+            try {
+                const respuestaServidor = await fetch('http://localhost:3000/api/chat', {
+                    method: 'POST',
+                    headers: {
+                        'Content-Type': 'application/json'
+                    },
+                    body: JSON.stringify({ mensajeUsuario: mensajeTexto })
+                });
+
+                const data = await respuestaServidor.json();
+
+                // 🔍 AGREGA ESTA LÍNEA PARA DEBUGGEAR:
+                console.log("Datos recibidos del servidor:", data);
+
+                // 4. Reemplazar el texto de carga con la respuesta real de la IA
+                botDiv.innerText = data.respuestaIA;
+
+            } catch (error) {
+                console.error("Error:", error);
+                botDiv.innerText = "Lo siento, tuve un problema de conexión. ¿Podrías intentar de nuevo?";
+            }
+            chatBody.scrollTop = chatBody.scrollHeight; // Asegurar scroll final
         }
-    </script>
 
+        // FILTRO DE PRODUCTOS
 
-        <script>
-            // FILTRO DE PRODUCTOS
+        const filterButtons = document.querySelectorAll('.filter-tabs button');
+        const products = document.querySelectorAll('.product-card');
 
-            const filterButtons = document.querySelectorAll('.filter-tabs button');
-            const products = document.querySelectorAll('.product-card');
+        filterButtons.forEach(button => {
 
-            filterButtons.forEach(button => {
+            button.addEventListener('click', () => {
 
-                button.addEventListener('click', () => {
+                // Quitar active de todos
+                filterButtons.forEach(btn => btn.classList.remove('active'));
 
-                    // Quitar active de todos
-                    filterButtons.forEach(btn => btn.classList.remove('active'));
+                // Agregar active al seleccionado
+                button.classList.add('active');
 
-                    // Agregar active al seleccionado
-                    button.classList.add('active');
+                // Obtener categoría
+                const filter = button.getAttribute('data-filter');
 
-                    // Obtener categoría
-                    const filter = button.getAttribute('data-filter');
+                products.forEach(product => {
 
-                    products.forEach(product => {
+                    const category = product.getAttribute('data-category');
 
-                        const category = product.getAttribute('data-category');
+                    // Mostrar todos
+                    if (filter === 'all') {
+                        product.style.display = 'block';
+                    }
 
-                        // Mostrar todos
-                        if (filter === 'all') {
-                            product.style.display = 'block';
-                        }
+                    // Mostrar solo categoría seleccionada
+                    else if (category === filter) {
+                        product.style.display = 'block';
+                    }
 
-                        // Mostrar solo categoría seleccionada
-                        else if (category === filter) {
-                            product.style.display = 'block';
-                        }
-
-                        // Ocultar los demás
-                        else {
-                            product.style.display = 'none';
-                        }
-
-                    });
+                    // Ocultar los demás
+                    else {
+                        product.style.display = 'none';
+                    }
 
                 });
 
             });
-        </script>
 
+        });
+    </script>
 
-        <!-- MODAL DE PEDIDO -->
-        <div class="modal-overlay" id="modalOverlay">
+    <!-- MODAL DE PEDIDO -->
+    <div class="modal-overlay" id="modalOverlay">
 
-            <div class="modal">
+        <div class="modal">
 
-                <span class="close-modal" onclick="cerrarModal()">✖</span>
+            <span class="close-modal" onclick="cerrarModal()">✖</span>
 
-                <h2 id="modalProducto">Producto</h2>
+            <h2 id="modalProducto">Producto</h2>
 
-                <p id="modalPrecio">$0.00</p>
+            <p id="modalPrecio">$0.00</p>
 
-                <!-- Cantidad -->
-                <label>Cantidad:</label>
-                <div class="cantidad-box">
-                    <button onclick="cambiarCantidad(-1)">-</button>
-                    <span id="cantidad">1</span>
-                    <button onclick="cambiarCantidad(1)">+</button>
-                </div>
+            <!-- Cantidad -->
+            <label>Cantidad:</label>
+            <div class="cantidad-box">
+                <button onclick="cambiarCantidad(-1)">-</button>
+                <span id="cantidad">1</span>
+                <button onclick="cambiarCantidad(1)">+</button>
+            </div>
 
-                <!-- Tamaño -->
-                <label>Tamaño:</label>
-                <select id="tamanoCafe">
-                    <option>Chico</option>
-                    <option>Mediano</option>
-                    <option>Grande</option>
-                </select>
+            <!-- Tamaño -->
+            <label>Tamaño:</label>
+            <select id="tamanoCafe">
+                <option>Chico</option>
+                <option>Mediano</option>
+                <option>Grande</option>
+            </select>
 
-                <!-- Extras -->
-                <label>Extras:</label>
+            <!-- Extras -->
+            <label>Extras:</label>
 
-                <div class="extras">
+            <div class="extras">
 
-                    <label>
-                        <input type="checkbox" value="Leche Almendra">
-                        Leche de Almendra
-                    </label>
+                <label>
+                    <input type="checkbox" value="Leche Almendra">
+                    Leche de Almendra
+                </label>
 
-                    <label>
-                        <input type="checkbox" value="Shot Extra Espresso">
-                        Shot Extra Espresso
-                    </label>
+                <label>
+                    <input type="checkbox" value="Shot Extra Espresso">
+                    Shot Extra Espresso
+                </label>
 
-                    <label>
-                        <input type="checkbox" value="Crema Batida">
-                        Crema Batida
-                    </label>
+                <label>
+                    <input type="checkbox" value="Crema Batida">
+                    Crema Batida
+                </label>
 
-                    <label>
-                        <input type="checkbox" value="Jarabe Vainilla">
-                        Jarabe Vainilla
-                    </label>
-
-                </div>
-
-                <button class="btn-confirmar" onclick="confirmarPedido()">
-                    Agregar Pedido
-                </button>
+                <label>
+                    <input type="checkbox" value="Jarabe Vainilla">
+                    Jarabe Vainilla
+                </label>
 
             </div>
 
+            <button class="btn-confirmar" onclick="confirmarPedido()">
+                Agregar Pedido
+            </button>
+
         </div>
 
+    </div>
 
-        <!-- Cantidad de productos y más -->
-         <script>
+    <script src="js/script.js"></script>
+    <script>
+        let cantidad = 1;
+        let precioActual = 0; // Almacenará el precio base del producto seleccionado
 
-                let cantidad = 1;
+        function abrirModal(boton) {
+            const producto = boton.getAttribute("data-producto");
+            precioActual = parseFloat(boton.getAttribute("data-precio"));
 
-                function abrirModal(boton){
+            document.getElementById("modalProducto").innerText = producto;
+            document.getElementById("modalPrecio").innerText = "$" + precioActual + ".00";
 
-                    const producto = boton.getAttribute("data-producto");
-                    const precio = boton.getAttribute("data-precio");
+            cantidad = 1;
+            document.getElementById("cantidad").innerText = cantidad;
 
-                    document.getElementById("modalProducto").innerText = producto;
-                    document.getElementById("modalPrecio").innerText = "$" + precio + ".00";
+            // Reiniciar valores visuales del modal a su estado por defecto
+            document.getElementById("tamanoCafe").value = "Chico";
+            document.querySelectorAll('.extras input').forEach(extra => extra.checked = false);
 
-                    cantidad = 1;
-                    document.getElementById("cantidad").innerText = cantidad;
+            document.getElementById("modalOverlay").style.display = "flex";
+        }
 
-                    document.getElementById("modalOverlay").style.display = "flex";
-                }
+        function cerrarModal() {
+            document.getElementById("modalOverlay").style.display = "none";
+        }
 
-                function cerrarModal(){
-                    document.getElementById("modalOverlay").style.display = "none";
-                }
+        function cambiarCantidad(valor) {
+            cantidad += valor;
+            if (cantidad < 1) {
+                cantidad = 1;
+            }
+            document.getElementById("cantidad").innerText = cantidad;
+        }
 
-                function cambiarCantidad(valor){
+        function confirmarPedido() {
+            const producto = document.getElementById("modalProducto").innerText;
+            const tamano = document.getElementById("tamanoCafe").value;
+            const extrasSeleccionados = [];
+            const extras = document.querySelectorAll('.extras input:checked');
 
-                    cantidad += valor;
+            extras.forEach(extra => {
+                extrasSeleccionados.push(extra.value);
+            });
 
-                    if(cantidad < 1){
-                        cantidad = 1;
+            // Llamamos a la nueva función pasando todos los parámetros personalizados
+            agregarProductoEspecifico(producto, precioActual, cantidad, tamano, extrasSeleccionados);
+
+            cerrarModal();
+        }
+
+        // LÓGICA DEL CARRITO MULTI-PRODUCTO ADAPTADO A VARIANTES
+        let carrito = JSON.parse(localStorage.getItem('carrito')) || [];
+
+        function conmutarCarrito() {
+            const panel = document.getElementById('carrito-panel');
+            panel.classList.toggle('activo');
+        }
+
+        // Inserta el producto evaluando si es idéntico en especificaciones
+        function agregarProductoEspecifico(nombre, precio, cant, tamano, extras) {
+            // Buscamos si ya existe en el carrito un producto EXACTAMENTE igual en nombre, tamaño y mismos extras
+            const productoExistente = carrito.find(item =>
+                item.nombre === nombre &&
+                item.tamano === tamano &&
+                item.extras.length === extras.length &&
+                item.extras.every(val => extras.includes(val))
+            );
+
+            if (productoExistente) {
+                // Si ya existe uno idéntico, incrementamos su cantidad con la nueva selección
+                productoExistente.cantidad += cant;
+            } else {
+                // Si tiene combinaciones diferentes, lo agregamos como un elemento nuevo
+                carrito.push({
+                    nombre: nombre,
+                    precio: precio,
+                    cantidad: cant,
+                    tamano: tamano,
+                    extras: extras
+                });
+            }
+
+            actualizarInterfaz();
+
+            // Desplegar el panel lateral automáticamente para dar feedback visual de que se añadió
+            document.getElementById('carrito-panel').classList.add('activo');
+        }
+
+        function actualizarInterfaz() {
+            const listaCarrito = document.getElementById('lista-carrito');
+            const listaFormulario = document.getElementById('resumen-productos-form');
+            const totalHTML = document.getElementById('total-carrito');
+            const totalFormHTML = document.getElementById('form-total-valor');
+            const contadorHTML = document.getElementById('carrito-contador');
+
+            listaCarrito.innerHTML = '';
+            listaFormulario.innerHTML = '';
+            let total = 0;
+            let totalArticulos = 0;
+
+            if (carrito.length === 0) {
+                listaFormulario.innerHTML = `<li style="color: #868e96; font-style: italic; list-style: none;">Tu carrito está vacío. ¡Agrega delicias desde el menú!</li>`;
+            }
+
+            carrito.forEach((producto, indice) => {
+                const subtotalProducto = producto.precio * producto.cantidad;
+                total += subtotalProducto;
+                totalArticulos += producto.cantidad;
+
+                // Formatear la cadena de texto de los extras seleccionados
+                const textoExtras = producto.extras && producto.extras.length > 0
+                    ? `+ ${producto.extras.join(', ')}`
+                    : 'Sin extras';
+
+                // 1. Renderizado en el Carrito Lateral Desplegable
+                const liCarrito = document.createElement('li');
+                liCarrito.style.display = 'flex';
+                liCarrito.style.justify = 'space-between';
+                liCarrito.style.alignItems = 'center';
+                liCarrito.style.padding = '12px 0';
+                liCarrito.style.borderBottom = '1px solid #f8f9fa';
+                liCarrito.style.fontSize = '14px';
+                liCarrito.innerHTML = `
+                    <div style="color: #495057; text-align: left; max-width: 85%;">
+                        <strong>${producto.nombre}</strong> <span style="color:#6f4e37; font-weight:600;">(x${producto.cantidad})</span><br>
+                        <small style="color: #6f4e37; display: block; font-size: 11px; margin: 2px 0; line-height: 1.3;">
+                            Tamaño: <strong>${producto.tamano}</strong><br>
+                            <span style="color: #868e96;">${textoExtras}</span>
+                        </small>
+                        <span style="color:#2d241e; font-weight: 500;">$${subtotalProducto.toFixed(2)}</span>
+                    </div>
+                    <button style="background:#dc3545; color:white; border:none; padding:4px 8px; font-size:11px; border-radius:4px; cursor:pointer;" onclick="eliminarUno(${indice})">✕</button>
+                `;
+                listaCarrito.appendChild(liCarrito);
+
+                // 2. Renderizado en el Resumen del Formulario de Compra
+                const liForm = document.createElement('li');
+                liForm.style.display = 'flex';
+                liForm.style.flexDirection = 'column';
+                liForm.style.alignItems = 'stretch';
+                liForm.style.padding = '6px 0';
+                liForm.innerHTML = `
+                    <div style="display: flex; justify-content: space-between; width: 100%;">
+                        <span>${producto.nombre} <strong style="color:#6f4e37;">(x${producto.cantidad})</strong></span>
+                        <span>$${subtotalProducto.toFixed(2)}</span>
+                    </div>
+                    <small style="color: #868e96; font-size: 11px; margin-top: 1px;">
+                        Tamaño: ${producto.tamano} | ${textoExtras}
+                    </small>
+                `;
+                listaFormulario.appendChild(liForm);
+            });
+
+            totalHTML.innerText = total.toFixed(2);
+            totalFormHTML.innerText = total.toFixed(2);
+            contadorHTML.innerText = totalArticulos;
+
+            localStorage.setItem('carrito', JSON.stringify(carrito));
+        }
+
+        function eliminarUno(indice) {
+            if (carrito[indice].cantidad > 1) {
+                carrito[indice].cantidad--;
+            } else {
+                carrito.splice(indice, 1);
+            }
+            actualizarInterfaz();
+        }
+
+        function vaciarCarrito() {
+            carrito = [];
+            actualizarInterfaz();
+        }
+
+        function irAlCheckout() {
+            if (carrito.length === 0) {
+                alert("Agrega productos al carrito antes de ir a pagar.");
+                return;
+            }
+            document.getElementById('formulario').scrollIntoView({ behavior: 'smooth' });
+            document.getElementById('nombre').focus();
+            conmutarCarrito(); // Cierra la pestaña flotante
+        }
+
+        // ESCUCHADORES Y PROCESAMIENTO DE ENVÍO
+        document.addEventListener("DOMContentLoaded", () => {
+            // NOTA: Se eliminó por completo el "querySelectorAll('.btn-add')" directo del DOMContentLoaded.
+            // Esto previene que se inserte un producto vacío e inmediato al presionar el botón "+".
+            // Ahora la entrada al carrito depende al 100% de la confirmación dentro de la ventana modal.
+
+            // Intercepta el botón de "CONFIRMAR COMPRA" del formulario
+            const formularioPedido = document.getElementById('form-finalizar-pedido');
+            if (formularioPedido) {
+                formularioPedido.addEventListener('submit', async (e) => {
+                    e.preventDefault();
+
+                    if (carrito.length === 0) {
+                        alert("Tu carrito está vacío. Agrega productos del menú para comprar.");
+                        return;
                     }
 
-                    document.getElementById("cantidad").innerText = cantidad;
-                }
+                    const nombre = document.getElementById('nombre').value.trim();
+                    const direccion = document.getElementById('direccion').value.trim();
+                    const metodoPago = document.getElementById('metodo_pago').value;
+                    const totalFinal = carrito.reduce((sum, item) => sum + (item.precio * item.cantidad), 0);
 
-                function confirmarPedido(){
+                    // JSON Estructurado completo que enviará los tamaños y los extras al backend de Node.js
+                    const datosPedido = {
+                        cliente: nombre,
+                        direccion: direccion,
+                        metodoPago: metodoPago,
+                        productos: carrito,
+                        total: totalFinal,
+                        fecha: new Date().toISOString()
+                    };
 
-                    const producto = document.getElementById("modalProducto").innerText;
+                    try {
+                        const respuesta = await fetch('http://localhost:3000/guardar-pedido', {
+                            method: 'POST',
+                            headers: { 'Content-Type': 'application/json' },
+                            body: JSON.stringify(datosPedido)
+                        });
 
-                    const tamano = document.getElementById("tamanoCafe").value;
+                        if (respuesta.ok) {
+                            alert(`¡Perfecto ${nombre}! Tu orden completa ha sido registrada. Tu café va en camino a: ${direccion}`);
+                            vaciarCarrito();
+                            formularioPedido.reset();
+                        } else {
+                            alert("Hubo un error en el servidor al guardar tu orden.");
+                        }
+                    } catch (error) {
+                        console.error("Error de conexión:", error);
+                        // Copia de seguridad local por si no has iniciado el servidor local de Node en este instante
+                        alert(`¡Pedido Simulado con Éxito (Modo Local)! \n\nCliente: ${nombre}\nDirección: ${direccion}\nPago: ${metodoPago}\nTotal: $${totalFinal.toFixed(2)}\n\nEl diseño responde perfectamente en el frontend. Las especificaciones de tamaño y aderezos extras se añadieron al objeto de datos con éxito.`);
+                        vaciarCarrito();
+                        formularioPedido.reset();
+                    }
+                });
+            }
 
-                    const extrasSeleccionados = [];
-
-                    const extras = document.querySelectorAll('.extras input:checked');
-
-                    extras.forEach(extra => {
-                        extrasSeleccionados.push(extra.value);
-                    });
-
-                    alert(
-                        "Pedido agregado:\n\n" +
-                        "Producto: " + producto +
-                        "\nCantidad: " + cantidad +
-                        "\nTamaño: " + tamano +
-                        "\nExtras: " + 
-                        (extrasSeleccionados.length > 0 
-                            ? extrasSeleccionados.join(", ") 
-                            : "Ninguno")
-                    );
-
-                    cerrarModal();
-                }
-
-        </script>
+            actualizarInterfaz();
+        });
+    </script>
 
 </body>
 

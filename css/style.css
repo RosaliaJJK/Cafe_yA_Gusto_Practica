@@ -1,9 +1,13 @@
 /* --- VARIABLES Y CONFIGURACIÓN --- */
 :root {
-    --primary-color: #6F4E37; /* Tono café principal */
-    --accent-color: #C19A6B;  /* Tono café claro para detalles */
-    --bg-color: #FDFBF7;      /* Crema suave para el fondo */
-    --text-dark: #2D241E;     /* Color de texto para lectura fácil */
+    --primary-color: #6F4E37;
+    /* Tono café principal */
+    --accent-color: #C19A6B;
+    /* Tono café claro para detalles */
+    --bg-color: #FDFBF7;
+    /* Crema suave para el fondo */
+    --text-dark: #2D241E;
+    /* Color de texto para lectura fácil */
     --white: #ffffff;
     --shadow: 0 4px 15px rgba(0, 0, 0, 0.05);
 }
@@ -28,44 +32,100 @@ body {
     margin: 0 auto;
 }
 
-/* --- CABECERA --- */
+/* --- CABECERA PREMIUM --- */
 .header {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding: 20px 8%;
-    background: var(--white);
-    box-shadow: 0 2px 8px rgba(0,0,0,0.02);
+    padding: 12px 8%;
+    background: rgba(255, 255, 255, 0.85);
+    backdrop-filter: blur(12px);
+    -webkit-backdrop-filter: blur(12px);
+    box-shadow: 0 4px 20px rgba(111, 78, 55, 0.06);
     position: sticky;
     top: 0;
     z-index: 1000;
+    transition: all 0.3s ease;
 }
 
-/* ESTILOS ACTUALIZADOS: Logo con imagen circular */
+/* --- LOGO COMBINADO --- */
 .logo {
     display: flex;
     align-items: center;
+    gap: 14px;
     text-decoration: none;
 }
 
 .logo img {
-    width: 60px; /* Tamaño del logo */
-    height: 60px; /* Misma medida para que sea un círculo perfecto */
-    border-radius: 50%; /* Hace la imagen circular */
-    object-fit: cover; /* Evita que el logo se deforme */
-    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+    width: 55px;
+    height: 55px;
+    border-radius: 50%;
+    object-fit: cover;
+    border: 2px solid var(--accent-color);
+    padding: 3px;
+    background-color: var(--white);
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.05);
+    transition: all 0.4s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+}
+
+.logo-text {
+    font-size: 1.3rem;
+    font-weight: 600;
+    color: var(--primary-color);
+    letter-spacing: 0.5px;
+    font-family: 'Poppins', sans-serif;
+    transition: color 0.3s ease;
+}
+
+.logo-text span {
+    color: var(--accent-color);
+    font-weight: 400;
+}
+
+.logo:hover img {
+    transform: scale(1.06) rotate(-3deg);
+    border-color: var(--primary-color);
+    box-shadow: 0 0 18px rgba(111, 78, 55, 0.28);
+}
+
+.logo:hover .logo-text {
+    color: var(--text-dark);
+}
+
+.nav {
+    display: flex;
+    align-items: center;
 }
 
 .nav a {
-    margin: 0 20px;
+    margin: 0 18px;
     text-decoration: none;
     color: var(--text-dark);
     font-size: 0.95rem;
-    transition: 0.3s;
+    font-weight: 500;
+    position: relative;
+    padding: 6px 0;
+    transition: color 0.3s ease;
 }
 
 .nav a:hover {
     color: var(--primary-color);
+}
+
+.nav a::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    width: 0;
+    height: 2px;
+    background-color: var(--primary-color);
+    transition: width 0.3s ease, left 0.3s ease;
+}
+
+.nav a:hover::after {
+    width: 100%;
+    left: 0;
 }
 
 .header-icons .icon {
@@ -79,9 +139,7 @@ body {
     transform: scale(1.1);
 }
 
-/* --- SECCIÓN PRINCIPAL (HERO) --- */
-
-
+/* --- HERO --- */
 .hero-overlay {
     background: rgba(0, 0, 0, 0.4);
     width: 100%;
@@ -97,7 +155,6 @@ body {
     max-width: 600px;
 }
 
-/* ESTILO AGREGADO: Etiqueta (Badge) del Hero */
 .badge {
     background: var(--accent-color);
     color: var(--white);
@@ -132,9 +189,11 @@ body {
     background: var(--accent-color);
 }
 
-/* --- ESPACIADO Y SEPARACIÓN --- */
-.promo-banner, .menu-section, .order-form-section {
-    padding: 80px 8%; 
+/* --- ESPACIADO --- */
+.promo-banner,
+.menu-section,
+.order-form-section {
+    padding: 80px 8%;
 }
 
 .promo-card {
@@ -144,14 +203,93 @@ body {
     border-radius: 15px;
     text-align: center;
     box-shadow: var(--shadow);
-    /* AGREGADO: Transición suave para el zoom */
     transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
-/* AGREGADO: Efecto hover (zoom y aumento de sombra) para las promociones */
 .promo-card:hover {
     transform: scale(1.05);
     box-shadow: 0 8px 25px rgba(0, 0, 0, 0.15);
+}
+
+/* ==========================================
+   ESTILOS CORREGIDOS PARA EL CARRUSEL (FADE)
+   ========================================== */
+/* ==========================================
+   CARRUSEL FLUIDO Y AJUSTADO (DESLIZAMIENTO)
+   ========================================== */
+.carousel {
+    position: relative;
+    width: 100%;
+    max-width: 1000px;   /* Evita que se estire infinitamente en pantallas enormes */
+    height: 400px;        /* Altura fija ideal para tus banners promociónales */
+    margin: 30px auto;    /* Lo centra en la página y le da aire arriba/abajo */
+    overflow: hidden;     /* Oculta las fotos que están en "espera" a los lados */
+    border-radius: 15px;  /* Bordes suaves estéticos */
+    box-shadow: 0 8px 24px rgba(0, 0, 0, 0.1);
+}
+
+.carousel-track {
+    display: flex;        /* ¡ESTO ES LO MÁS IMPORTANTE! Pone las fotos en fila india */
+    width: 100%;
+    height: 100%;
+    transition: transform 0.5s cubic-bezier(0.25, 1, 0.5, 1); /* Deslizamiento premium */
+}
+
+.slide {
+    min-width: 100%;      /* Cada slide ocupa exactamente el 100% del contenedor */
+    height: 100%;
+}
+
+.slide img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;    /* Reajusta y llena el espacio sin deformar ni estirar tu arte */
+    object-position: center; /* Centra el enfoque de la imagen */
+}
+
+/* --- BOTONES FLOTANTES ESTILIZADOS --- */
+.prev, .next {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%); /* Centrado vertical matemático perfecto */
+    background: rgba(255, 255, 255, 0.75);
+    backdrop-filter: blur(4px);  /* Efecto esmerilado moderno */
+    -webkit-backdrop-filter: blur(4px);
+    color: #6F4E37;              /* Color café de tu paleta */
+    border: none;
+    width: 45px;
+    height: 45px;
+    border-radius: 50%;
+    font-size: 18px;
+    font-weight: bold;
+    cursor: pointer;
+    z-index: 10;                 /* Los mantiene siempre por encima de las fotos */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: all 0.3s ease;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.15);
+}
+
+.prev { left: 20px; }
+.next { right: 20px; }
+
+.prev:hover, .next:hover {
+    background: #6F4E37;
+    color: #ffffff;
+    transform: translateY(-50%) scale(1.1); /* Efecto interactivo al pasar el mouse */
+}
+
+/* Ajuste rápido para celulares */
+@media (max-width: 768px) {
+    .carousel {
+        height: 250px; /* Más bajito en pantallas pequeñas para que no tape todo */
+    }
+    .prev, .next {
+        width: 35px;
+        height: 35px;
+        font-size: 14px;
+    }
 }
 
 /* --- MENÚ DE PRODUCTOS --- */
@@ -164,7 +302,7 @@ body {
 .filter-tabs {
     display: flex;
     justify-content: center;
-    flex-wrap: wrap; /* Permite que los botones bajen de línea en móviles */
+    flex-wrap: wrap;
     gap: 15px;
     margin-bottom: 40px;
 }
@@ -180,7 +318,8 @@ body {
     transition: all 0.3s ease;
 }
 
-.filter-tabs button.active, .filter-tabs button:hover {
+.filter-tabs button.active,
+.filter-tabs button:hover {
     background: var(--primary-color);
     color: var(--white);
 }
@@ -206,22 +345,20 @@ body {
     box-shadow: 0 8px 25px rgba(0, 0, 0, 0.1);
 }
 
-/* ESTILOS ACTUALIZADOS: Contenedor e imágenes de los productos */
 .product-img {
     height: 180px;
     width: 100%;
     background: #f9f4f0;
-    overflow: hidden; /* Mantiene la imagen dentro de los bordes curvos de la tarjeta */
+    overflow: hidden;
 }
 
 .product-img img {
     width: 100%;
     height: 100%;
-    object-fit: cover; /* Recorta la imagen automáticamente para llenar el cuadro sin deformarla */
-    transition: transform 0.4s ease; /* Transición suave para el zoom */
+    object-fit: cover;
+    transition: transform 0.4s ease;
 }
 
-/* Efecto de zoom elegante al pasar el ratón */
 .product-card:hover .product-img img {
     transform: scale(1.08);
 }
@@ -242,7 +379,6 @@ body {
     margin-bottom: 10px;
 }
 
-/* ESTILO AGREGADO: Botón "+" en las tarjetas de producto */
 .btn-add {
     background: var(--primary-color);
     color: var(--white);
@@ -272,7 +408,7 @@ body {
 
 .rec-flex {
     display: flex;
-    flex-wrap: wrap; /* Asegura que no se desborde en móviles */
+    flex-wrap: wrap;
     gap: 15px;
     margin-top: 15px;
 }
@@ -284,10 +420,10 @@ body {
     font-size: 0.95rem;
     font-weight: 600;
     color: var(--primary-color);
-    box-shadow: 0 2px 5px rgba(0,0,0,0.05);
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.05);
 }
 
-/* --- FORMULARIO --- */
+/* --- FORMULARIO COMPRA --- */
 .form-container {
     max-width: 600px;
     margin: 0 auto;
@@ -308,7 +444,8 @@ body {
     font-weight: 600;
 }
 
-.form-group input, .form-group select {
+.form-group input,
+.form-group select {
     width: 100%;
     padding: 12px;
     border: 1px solid #ddd;
@@ -319,7 +456,8 @@ body {
     transition: border-color 0.3s;
 }
 
-.form-group input:focus, .form-group select:focus {
+.form-group input:focus,
+.form-group select:focus {
     border-color: var(--primary-color);
 }
 
@@ -328,7 +466,6 @@ body {
     gap: 20px;
 }
 
-/* ESTILO AGREGADO: Para que las cajas de tamaño y pago se dividan al 50% */
 .form-row .form-group {
     flex: 1;
 }
@@ -365,13 +502,14 @@ body {
     justify-content: center;
     color: var(--white);
     font-size: 1.5rem;
-    box-shadow: 0 4px 15px rgba(0,0,0,0.2);
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
     cursor: pointer;
     transition: transform 0.3s ease;
     z-index: 9999;
 }
 
 .chatbot-bubble:hover {
+    background: #5a3d2a;
     transform: scale(1.1);
 }
 
@@ -388,354 +526,436 @@ body {
     font-weight: 600;
 }
 
-/* --- RESPONSIVE DESIGN (MÓVILES) --- */
-@media (max-width: 768px) {
-    .form-row {
-        flex-direction: column;
-        gap: 0;
-    }
-    .hero h1 {
-        font-size: 2.2rem;
-    }
-    .header {
-        flex-direction: column;
-        padding: 15px;
-    }
-    .nav {
-        margin: 15px 0;
-    }
-
-    .chat-window{
-    width: 95%;
-    right: 10px;
-    bottom: 80px;
-    }
-
-    .chat-hint{
-        display:none;
-    }
-}
-
-/* POPUP */
-
-.popup{
+/* POPUP GENERAL */
+.popup {
     position: fixed;
-    top:0;
-    left:0;
-    width:100%;
-    height:100%;
-    background: rgba(0,0,0,0.6);
-
-    display:flex;
-    justify-content:center;
-    align-items:center;
-
-    z-index:9999;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.6);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 9999;
 }
 
-.popup-content{
-    background:white;
-    padding:30px;
-    border-radius:15px;
-    text-align:center;
-    width:300px;
-
+.popup-content {
+    background: white;
+    padding: 30px;
+    border-radius: 15px;
+    text-align: center;
+    width: 300px;
     animation: aparecer 0.3s ease;
 }
 
-.popup-content h2{
-    color:#6F4E37;
-    margin-bottom:10px;
+.popup-content h2 {
+    color: #6F4E37;
+    margin-bottom: 10px;
 }
 
-.popup-content button{
-    margin-top:15px;
-    padding:10px 20px;
-    border:none;
-    background:#6F4E37;
-    color:white;
-    border-radius:8px;
-    cursor:pointer;
+.popup-content button {
+    margin-top: 15px;
+    padding: 10px 20px;
+    border: none;
+    background: #6F4E37;
+    color: white;
+    border-radius: 8px;
+    cursor: pointer;
 }
 
-.hidden{
-    display:none;
+.hidden {
+    display: none;
 }
 
-@keyframes aparecer{
-
-    from{
-        transform:scale(0.8);
-        opacity:0;
+@keyframes aparecer {
+    from {
+        transform: scale(0.8);
+        opacity: 0;
     }
 
-    to{
-        transform:scale(1);
-        opacity:1;
+    to {
+        transform: scale(1);
+        opacity: 1;
     }
-
 }
 
-/* diseño del chatbot */
-
-/* NUEVA VENTANA DE CHAT */
+/* VENTANA CHATBOT */
 .chat-window {
-    display: none; /* Se oculta al principio */
+    display: none;
     position: fixed;
-    bottom: 90px; /* Se posiciona arriba de la burbuja */
+    bottom: 90px;
     right: 20px;
     width: 320px;
     height: 400px;
     background-color: white;
     border-radius: 12px;
-    box-shadow: 0px 5px 15px rgba(0,0,0,0.2);
+    box-shadow: 0px 5px 15px rgba(0, 0, 0, 0.2);
     flex-direction: column;
     overflow: hidden;
     z-index: 1000;
     font-family: sans-serif;
 }
 
-/* Encabezado, cuerpo y footer del chat */
-.chat-header { 
-    background-color: var(--primary-color); 
-    color: white; 
-    padding: 15px; 
-    display: flex; 
-    justify-content: space-between; 
+.chat-header {
+    background-color: var(--primary-color);
+    color: white;
+    padding: 15px;
+    display: flex;
+    justify-content: space-between;
     font-weight: bold;
 }
-.close-btn { 
-    background: none; 
-    border: none; 
-    color: white; 
-    font-size: 16px; 
-    cursor: pointer; 
+
+.close-btn {
+    background: none;
+    border: none;
+    color: white;
+    font-size: 16px;
+    cursor: pointer;
 }
-.chat-body { 
-    flex: 1; 
-    padding: 15px; 
-    background-color: #f8f9fa; 
-    overflow-y: auto; 
+
+.chat-body {
+    flex: 1;
+    padding: 15px;
+    background-color: #f8f9fa;
+    overflow-y: auto;
+    display: flex;
+    flex-direction: column;
 }
-.msg { 
+
+.msg {
     width: fit-content;
-    padding: 10px 15px; 
-    border-radius: 15px; 
-    margin-bottom: 10px; 
-    max-width: 75%; 
+    padding: 10px 15px;
+    border-radius: 15px;
+    margin-bottom: 10px;
+    max-width: 75%;
     font-size: 14px;
     line-height: 1.4;
     word-break: break-word;
 }
-.bot-msg { 
-    background-color: #e9ecef; 
-    color: #333; 
-    align-self: flex-start; 
-}
-.chat-footer { 
-    display: flex; 
-    padding: 10px; 
-    border-top: 1px solid #eee; 
-}
-.chat-footer input { 
-    flex: 1; 
-    padding: 8px; 
-    border: 1px solid #ddd; 
-    border-radius: 4px; 
-}
-.chat-footer button { 
-    background-color: var(--primary-color); 
-    color: white; 
-    border: none; 
-    padding: 8px 12px; 
-    margin-left: 5px; 
-    border-radius: 4px; 
-    cursor: pointer; 
+
+.bot-msg {
+    background-color: #e9ecef;
+    color: #333;
+    align-self: flex-start;
 }
 
-.carousel{
-    position: relative;
-    overflow: hidden;
-    width: 100%;
-}
-
-.carousel-track{
+.chat-footer {
     display: flex;
-    transition: transform 0.5s ease-in-out;
+    padding: 10px;
+    border-top: 1px solid #eee;
 }
 
-.slide{
-    min-width: 100%;
+.chat-footer input {
+    flex: 1;
+    padding: 8px;
+    border: 1px solid #ddd;
+    border-radius: 4px;
 }
 
-.slide img{
-    width: 100%;
-    display: block;
-}
-
-
-/* BOTONES */
-
-.prev,
-.next {
-    position: absolute;
-    top: 50%;
-    transform: translateY(-50%);
-    background: rgba(0,0,0,0.5);
+.chat-footer button {
+    background-color: var(--primary-color);
     color: white;
     border: none;
-    padding: 15px;
+    padding: 8px 12px;
+    margin-left: 5px;
+    border-radius: 4px;
     cursor: pointer;
-    font-size: 25px;
-    border-radius: 50%;
-    z-index: 10;
 }
 
-.prev {
-    left: 15px;
-}
-
-.next {
-    right: 15px;
-}
-
-.prev:hover,
-.next:hover {
-    background: rgba(0,0,0,0.8);
-}
-
-/* RESPONSIVE DEL CARRUSEL */
-
-@media (max-width: 768px){
-
-    .slide img{
-        height: 250px;
-    }
-
-    .prev,
-    .next{
-        padding: 10px;
-        font-size: 18px;
-    }
-
-}
-
-.filter-tabs button.active{
-    background-color: #6F4E37;
-    color: white;
-}
-
-
-/*CSS DE PEDIDOS*/
-
-/* MODAL */
-
-.modal-overlay{
+/* --- ESTILOS DEL CARRITO FLOTANTE --- */
+.carrito-flotante-contenedor {
     position: fixed;
-    top:0;
-    left:0;
-    width:100%;
-    height:100%;
-    background: rgba(0,0,0,0.6);
-    display:none;
-    justify-content:center;
-    align-items:center;
-    z-index:9999;
+    bottom: 110px;
+    right: 30px;
+    z-index: 999;
+    font-family: 'Poppins', sans-serif;
 }
 
-.modal{
-    background:white;
-    width:350px;
-    padding:25px;
-    border-radius:20px;
-    position:relative;
-    display:flex;
-    flex-direction:column;
-    gap:15px;
-    animation: aparecer .3s ease;
+.icono-carrito-btn {
+    background: #6F4E37;
+    color: white;
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 24px;
+    cursor: pointer;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+    border: none;
+    position: relative;
+    transition: transform 0.2s;
 }
 
-.chat-body{
-    display:flex;
-    flex-direction:column;
+.icono-carrito-btn:hover {
+    transform: scale(1.05);
+    background: #5a3d2a;
 }
 
-.close-modal{
-    position:absolute;
-    right:15px;
-    top:10px;
-    cursor:pointer;
-    font-size:20px;
-}
-
-.cantidad-box{
-    display:flex;
-    align-items:center;
-    gap:15px;
-}
-
-.cantidad-box button{
-    width:35px;
-    height:35px;
-    border:none;
-    border-radius:50%;
-    background:#6F4E37;
-    color:white;
-    font-size:18px;
-    cursor:pointer;
-}
-
-.extras{
-    display:flex;
-    flex-direction:column;
-    gap:10px;
-}
-
-.btn-confirmar{
-    background:#6F4E37;
-    color:white;
-    border:none;
-    padding:12px;
-    border-radius:12px;
-    cursor:pointer;
-    font-weight:bold;
-}
-
-.btn-confirmar:hover{
-    background:#5a3d2c;
-}
-
-
-/*CSS DE Fondo*/
-
-.hero{
-    background:
-        linear-gradient(rgba(0,0,0,0.5),
-        rgba(0,0,0,0.5)),
-        url("../Imagenes/fondo-cafe.jpg");
-
-    background-size: cover;
-    background-position: center;
-    background-repeat: no-repeat;
-
-    height: 100vh;
-
+.contador-badge {
+    position: absolute;
+    top: -3px;
+    right: -3px;
+    background: #bc5e24;
+    color: white;
+    font-size: 12px;
+    font-weight: 600;
+    width: 22px;
+    height: 22px;
+    border-radius: 50%;
     display: flex;
     align-items: center;
     justify-content: center;
 }
 
-
-.modal select{
-    padding:10px;
-    border-radius:10px;
-    border:1px solid #ccc;
+.carrito-desplegable {
+    position: absolute;
+    bottom: 75px;
+    right: 0;
+    width: 320px;
+    background: white;
+    border-radius: 12px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.15);
+    padding: 20px;
+    display: none;
+    border: 1px solid #e9ecef;
 }
 
-.modal label{
-    font-weight:bold;
+.carrito-desplegable.activo {
+    display: block;
 }
 
-img{
-    max-width:100%;
+.carrito-desplegable h2 {
+    margin: 0 0 15px 0;
+    font-size: 18px;
+    color: #333;
+    border-bottom: 2px solid #f4f4f4;
+    padding-bottom: 8px;
+}
+
+.carrito-desplegable ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    max-height: 240px;
+    overflow-y: auto;
+}
+
+.btn-checkout-cart {
+    background: #28a745;
+    width: 100%;
+    margin-top: 15px;
+    color: white;
+    border: none;
+    padding: 10px;
+    border-radius: 6px;
+    cursor: pointer;
+    font-weight: 600;
+}
+
+.btn-checkout-cart:hover {
+    background: #218838;
+}
+
+.btn-vaciar {
+    background: #6c757d;
+    width: 100%;
+    margin-top: 8px;
+    color: white;
+    border: none;
+    padding: 8px;
+    border-radius: 6px;
+    cursor: pointer;
+}
+
+.btn-vaciar:hover {
+    background: #5a6268;
+}
+
+/* Estilos del resumen dentro del formulario de compra */
+.form-resumen-contenedor {
+    background: #fdfaf7;
+    border: 1px solid #e6dfd5;
+    border-radius: 8px;
+    padding: 15px;
+    margin: 20px 0;
+    font-family: 'Poppins', sans-serif;
+}
+
+.form-resumen-contenedor h4 {
+    margin: 0 0 10px 0;
+    color: #6F4E37;
+    font-size: 16px;
+}
+
+#resumen-productos-form {
+    padding: 0;
+    margin: 0;
+    list-style: none;
+    max-height: 150px;
+    overflow-y: auto;
+}
+
+#resumen-productos-form li {
+    display: flex;
+    justify-content: space-between;
+    font-size: 14px;
+    padding: 5px 0;
+    border-bottom: 1px dashed #e6dfd5;
+    color: #495057;
+}
+
+.form-total-linea {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 12px;
+    padding-top: 10px;
+    border-top: 2px solid #6F4E37;
+    font-size: 16px;
+    color: #333;
+}
+
+/* --- MODAL DE AGREGAR PRODUCTO (VARIANTES) --- */
+.modal-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.6);
+    display: none;
+    justify-content: center;
+    align-items: center;
+    z-index: 9999;
+}
+
+.modal {
+    background: white;
+    width: 350px;
+    padding: 25px;
+    border-radius: 20px;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    animation: aparecer .3s ease;
+}
+
+.close-modal {
+    position: absolute;
+    right: 15px;
+    top: 10px;
+    cursor: pointer;
+    font-size: 20px;
+}
+
+.cantidad-box {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+}
+
+.cantidad-box button {
+    width: 35px;
+    height: 35px;
+    border: none;
+    border-radius: 50%;
+    background: #6F4E37;
+    color: white;
+    font-size: 18px;
+    cursor: pointer;
+}
+
+.extras {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.btn-confirmar {
+    background: #6F4E37;
+    color: white;
+    border: none;
+    padding: 12px;
+    border-radius: 12px;
+    cursor: pointer;
+    font-weight: bold;
+}
+
+.btn-confirmar:hover {
+    background: #5a3d2c;
+}
+
+.modal select {
+    padding: 10px;
+    border-radius: 10px;
+    border: 1px solid #ccc;
+}
+
+.modal label {
+    font-weight: bold;
+}
+
+/* --- SECCIÓN HERO FONDO --- */
+.hero {
+    background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url("../Imagenes/fondo-cafe.jpg");
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+img {
+    max-width: 100%;
+}
+
+/* --- DISEÑO RESPONSIVO (MÓVILES) --- */
+@media (max-width: 768px) {
+    .form-row {
+        flex-direction: column;
+        gap: 0;
+    }
+
+    .hero h1 {
+        font-size: 2.2rem;
+    }
+
+    .header {
+        flex-direction: column;
+        padding: 15px;
+    }
+
+    .nav {
+        margin: 15px 0;
+    }
+
+    .chat-window {
+        width: 95%;
+        right: 10px;
+        bottom: 80px;
+    }
+
+    .chat-hint {
+        display: none;
+    }
+
+    .carousel {
+        height: 280px;
+        /* Reducido para una visualización móvil impecable */
+    }
+
+    .slide img {
+        height: 100%;
+    }
+
+    .prev,
+    .next {
+        padding: 10px;
+        font-size: 18px;
+    }
 }
