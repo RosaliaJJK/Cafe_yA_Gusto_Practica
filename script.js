@@ -53,3 +53,59 @@ formulario.addEventListener("submit", async (e) => {
     }
 
 });
+
+// =========================
+// CARRUSEL PROMOCIONES
+// =========================
+
+const track = document.querySelector('.carousel-track');
+const slides = document.querySelectorAll('.slide');
+const nextBtn = document.querySelector('.next');
+const prevBtn = document.querySelector('.prev');
+
+let currentIndex = 0;
+
+function updateCarousel() {
+
+    track.style.transform =
+        `translateX(-${currentIndex * 100}%)`;
+
+}
+
+nextBtn.addEventListener('click', () => {
+
+    currentIndex++;
+
+    if (currentIndex >= slides.length) {
+        currentIndex = 0;
+    }
+
+    updateCarousel();
+
+});
+
+prevBtn.addEventListener('click', () => {
+
+    currentIndex--;
+
+    if (currentIndex < 0) {
+        currentIndex = slides.length - 1;
+    }
+
+    updateCarousel();
+
+});
+
+// AUTO PLAY
+
+setInterval(() => {
+
+    currentIndex++;
+
+    if (currentIndex >= slides.length) {
+        currentIndex = 0;
+    }
+
+    updateCarousel();
+
+}, 4000);
