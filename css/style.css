@@ -49,12 +49,14 @@ body {
 }
 
 .logo img {
-    width: 100px; /* Tamaño del logo */
-    height: 60px; /* Misma medida para que sea un círculo perfecto */
-    border-radius: 50%; /* Hace la imagen circular */
-    object-fit: cover; /* Evita que el logo se deforme */
+    width: 140px; /* Logo más grande */
+    height: 85px; /* Mantiene buena proporción */
+    border-radius: 50%;
+    object-fit: cover;
     box-shadow: 0 2px 5px rgba(0,0,0,0.1);
 }
+
+
 
 .nav a {
     margin: 0 20px;
