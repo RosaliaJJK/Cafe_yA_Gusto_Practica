@@ -723,3 +723,8 @@ body {
 .next:hover {
     background: rgba(0,0,0,0.8);
 }
+
+.filter-tabs button.active{
+    background-color: #6F4E37;
+    color: white;
+}
