@@ -958,7 +958,7 @@
 
             // 3. Petición al servidor Backend
             try {
-                const respuestaServidor = await fetch('http://localhost:3000/api/chat', {
+                const respuestaServidor = await fetch('/api/chat', {
                     method: 'POST',
                     headers: {
                         'Content-Type': 'application/json'
@@ -1087,7 +1087,7 @@
 
     </div>
 
-    <script src="js/script.js"></script>
+    <script src="script.js"></script>
     <script>
         let cantidad = 1;
         let precioActual = 0; // Almacenará el precio base del producto seleccionado
@@ -1304,7 +1304,7 @@
                     };
 
                     try {
-                        const respuesta = await fetch('http://localhost:3000/guardar-pedido', {
+                        const respuesta = await fetch('/guardar-pedido', {
                             method: 'POST',
                             headers: { 'Content-Type': 'application/json' },
                             body: JSON.stringify(datosPedido)

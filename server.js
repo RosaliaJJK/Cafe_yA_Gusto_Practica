@@ -1,9 +1,10 @@
 require('dotenv').config();
+
 // LIBRERÍAS
 const express = require("express");
 const path = require("path");
 const cors = require('cors');
-const { GoogleGenAI } = require('@google/genai'); // Librería oficial de Google
+const { GoogleGenAI } = require('@google/genai');
 
 // APP
 const app = express();
@@ -15,30 +16,38 @@ app.use(express.json());
 app.use(express.urlencoded({ extended: true }));
 app.use(cors());
 
+// ARCHIVOS ESTÁTICOS
 app.use(express.static(__dirname));
 
 // RUTA PRINCIPAL
 app.get("/", (req, res) => {
-
     res.sendFile(path.join(__dirname, "index.html"));
-
 });
 
-// CONFIGURACIÓN DE GEMINI
+// CONFIGURACIÓN GEMINI
 const ai = new GoogleGenAI({
-
     apiKey: process.env.GEMINI_API_KEY
+});
+
+// GUARDAR PEDIDO (SIMULADO)
+app.post("/guardar-pedido", (req, res) => {
+
+    console.log("Pedido recibido:");
+    console.log(req.body);
+
+    return res.status(200).json({
+        mensaje: "Pedido realizado correctamente"
+    });
 
 });
 
-// ENDPOINT DEL CHAT
+// ENDPOINT CHATBOT
 app.post('/api/chat', async (req, res) => {
 
     const { mensajeUsuario } = req.body;
 
     try {
 
-        // Usamos gemini-2.5-flash (el modelo rápido y gratuito)
         const response = await ai.models.generateContent({
 
             model: 'gemini-2.5-flash',
@@ -47,7 +56,7 @@ app.post('/api/chat', async (req, res) => {
 
             config: {
 
-                // Aquí va el entrenamiento del caso de la cafetería
+                                // Aquí va el entrenamiento del caso de la cafetería
                 systemInstruction: `Eres el Asistente Virtual impulsado por IA de la empresa "Café y a gusto...". 
                 Tu objetivo principal es apoyar en la toma de pedidos de bebidas a base de café y snacks, reduciendo errores del proceso manual.
                 
@@ -60,13 +69,14 @@ app.post('/api/chat', async (req, res) => {
                 Mantén un tono cálido, profesional y eficiente.
                 IMPORTANTE: Responde siempre en texto plano. No utilices formato Markdown ni asteriscos (**) para resaltar palabras.`
 
+
             }
 
         });
 
-        // Enviar la respuesta de Gemini de vuelta al HTML
-        res.json({
 
+        res.json({
+        
             respuestaIA: response.text
 
         });
@@ -78,7 +88,7 @@ app.post('/api/chat', async (req, res) => {
         res.status(500).json({
 
             error: "Error al procesar la respuesta de Gemini"
-
+            
         });
 
     }
@@ -88,6 +98,6 @@ app.post('/api/chat', async (req, res) => {
 // INICIAR SERVIDOR
 app.listen(PORT, () => {
 
-    console.log(`Servidor corriendo en http://localhost:${PORT}`);
+    console.log(`Servidor corriendo en puerto ${PORT}`);
 
 });
