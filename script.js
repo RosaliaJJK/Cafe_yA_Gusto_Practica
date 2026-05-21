@@ -4,57 +4,59 @@ if(formulario){
 
     formulario.addEventListener("submit", async (e) => {
 
-    e.preventDefault();
+        e.preventDefault();
+        
+        const datos = {
+            nombre: document.getElementById("nombre").value,
+            producto: document.getElementById("producto").value,
+            tamano: document.getElementById("tamano").value,
+            metodo_pago: document.getElementById("metodo_pago").value
+        };
 
-    const datos = {
-        nombre: document.getElementById("nombre").value,
-        producto: document.getElementById("producto").value,
-        tamano: document.getElementById("tamano").value,
-        metodo_pago: document.getElementById("metodo_pago").value
-    };
+        try {
 
-    try {
+            const respuesta = await fetch("/guardar-pedido", {
 
-        const respuesta = await fetch("/guardar-pedido", {
+                method: "POST",
 
-            method: "POST",
+                headers: {
+                    "Content-Type": "application/json"
+                },
 
-            headers: {
-                "Content-Type": "application/json"
-            },
+                body: JSON.stringify(datos)
 
-            body: JSON.stringify(datos)
+            });
 
-        });
+            const texto = await respuesta.text();
 
-        const texto = await respuesta.text();
+            console.log("RESPUESTA:");
+            console.log(texto);
 
-        console.log("RESPUESTA:");
-        console.log(texto);
+            if (!texto) {
 
-        if (!texto) {
+                alert("Servidor devolvió vacío");
+                return;
 
-            alert("Servidor devolvió vacío");
-            return;
+            }
+
+            const resultado = JSON.parse(texto);
+
+            alert(resultado.mensaje);
+
+            formulario.reset();
+
+        } catch (error) {
+
+            console.log("ERROR:");
+            console.log(error);
+
+            alert("Error conectando con servidor");
 
         }
 
-        const resultado = JSON.parse(texto);
+    });
 
-        alert(resultado.mensaje);
-
-        formulario.reset();
-
-    } catch (error) {
-
-        console.log("ERROR:");
-        console.log(error);
-
-        alert("Error conectando con servidor");
-
-    }
-
-})};
+}
 
 // =========================
 // CARRUSEL PROMOCIONES
@@ -69,12 +71,13 @@ let currentIndex = 0;
 
 function updateCarousel() {
 
-    track.style.transform =
-        `translateX(-${currentIndex * 100}%)`;
+    if(track){
+        track.style.transform = `translateX(-${currentIndex * 100}%)`;
+    }
 
 }
 
-if(nextBtn && prevBtn){
+if(nextBtn && prevBtn && slides.length > 0){
 
     nextBtn.addEventListener('click', () => {
 
