@@ -814,3 +814,23 @@ body {
 .btn-confirmar:hover{
     background:#5a3d2c;
 }
+
+
+/*CSS DE Fondo*/
+
+.hero{
+    background:
+        linear-gradient(rgba(0,0,0,0.5),
+        rgba(0,0,0,0.5)),
+        url("../Imagenes/fondo-cafe.jpg");
+
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+
+    height: 100vh;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
