@@ -1,6 +1,8 @@
 const formulario = document.querySelector("form");
 
-formulario.addEventListener("submit", async (e) => {
+if(formulario){
+
+    formulario.addEventListener("submit", async (e) => {
 
     e.preventDefault();
 
@@ -52,7 +54,7 @@ formulario.addEventListener("submit", async (e) => {
 
     }
 
-});
+})};
 
 // =========================
 // CARRUSEL PROMOCIONES
