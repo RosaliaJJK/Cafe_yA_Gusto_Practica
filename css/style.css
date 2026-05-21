@@ -553,37 +553,26 @@ body {
     cursor: pointer; 
 }
 
-/* ========================= */
-/* CARRUSEL PROMOCIONES */
-/* ========================= */
-
-.carousel {
+.carousel{
     position: relative;
-    width: 100%;
-    max-width: 1000px;
-    margin: auto;
     overflow: hidden;
-    border-radius: 20px;
+    width: 100%;
 }
 
-.carousel-track {
+.carousel-track{
     display: flex;
     transition: transform 0.5s ease-in-out;
-    width: 100%;
 }
 
-.slide {
+.slide{
     min-width: 100%;
-    flex-shrink: 0;
 }
 
-.slide img {
+.slide img{
     width: 100%;
-    height: 450px;
-    object-fit: cover;
     display: block;
-    border-radius: 20px;
 }
+
 
 /* BOTONES */
 
@@ -613,6 +602,22 @@ body {
 .prev:hover,
 .next:hover {
     background: rgba(0,0,0,0.8);
+}
+
+/* RESPONSIVE DEL CARRUSEL */
+
+@media (max-width: 768px){
+
+    .slide img{
+        height: 250px;
+    }
+
+    .prev,
+    .next{
+        padding: 10px;
+        font-size: 18px;
+    }
+
 }
 
 .filter-tabs button.active{

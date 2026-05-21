@@ -5,7 +5,7 @@ if(formulario){
     formulario.addEventListener("submit", async (e) => {
 
         e.preventDefault();
-        
+
         const datos = {
             nombre: document.getElementById("nombre").value,
             producto: document.getElementById("producto").value,
@@ -102,5 +102,21 @@ if(nextBtn && prevBtn && slides.length > 0){
         updateCarousel();
 
     });
+
+    // =========================
+    // MOVIMIENTO AUTOMÁTICO
+    // =========================
+
+    setInterval(() => {
+
+        currentIndex++;
+
+        if(currentIndex >= slides.length){
+            currentIndex = 0;
+        }
+
+        updateCarousel();
+
+    }, 3000);
 
 }
